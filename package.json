@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ghboy1.github.io/made-in-ghana-frontend/",
   "name": "made-in-ghana-frontend",
   "version": "0.1.0",
   "private": true,
@@ -27,13 +28,16 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "gh-pages": "^6.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
