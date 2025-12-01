@@ -1,0 +1,43 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Ghanaian Fabric",
+        "description": "High-quality fabric made in Ghana",
+        "price": 100,
+        "categoryId": 1,
+        "manufacturerId": 1
+      },
+      {
+        "id": 2,
+        "name": "Cocoa Powder",
+        "description": "Pure Ghanaian cocoa powder",
+        "price": 200,
+        "categoryId": 2,
+        "manufacturerId": 1
+      },
+      {
+        "id": 3,
+        "name": "Kente Cloth",
+        "description": "Traditional Ghanaian fabric",
+        "price": 50
+      },
+      {
+        "id": 4,
+        "name": "Shea Butter",
+        "description": "Natural moisturizer",
+        "price": 15
+      }
+    ],
+    "categories": [
+      { "id": 1, "name": "Textiles" },
+      { "id": 2, "name": "Food Products" }
+    ],
+    "manufacturers": [
+      {
+        "id": 1,
+        "name": "Ghana Textiles Co.",
+        "description": "Leading manufacturer of textiles in Ghana"
+      }
+    ]
+  }

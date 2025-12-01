@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #006b3f; /* Ghana green */
+  --secondary-color: #fcd116; /* Ghana yellow */
+  --accent-color: #ce1126; /* Ghana red */
+  --text-dark: #242424;
+  --text-light: #f5f5f5;
+  --neon-pink: #ff2f8e;
+  --neon-blue: #037707;
+  --bg-dark: #1a1a1a;
+  --card-dark: #222;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  color: var(--text-light);
+  perspective: 1000px;
+}
+
+/* Collapsed login button styling */
+.login-collapsed {
+  position: relative;
+  background-color: var(--card-dark);
+  color: white;
+  padding: 15px 40px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.login-collapsed::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(transparent, transparent, transparent, var(--neon-pink));
+  transform-origin: center;
+  animation: rotate 4s linear infinite;
+  z-index: -1;
+}
+
+.login-collapsed::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: var(--card-dark);
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.login-collapsed:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Expanded login form styling */
+.login-box {
+  position: relative;
+  width: 300px;
+  background-color: var(--card-dark);
+  border-radius: 10px;
+  padding: 30px 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 1;
+  animation: expand 0.5s ease forwards;
+  transform-origin: center;
+}
+
+@keyframes expand {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.login-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(transparent, transparent, transparent, var(--neon-pink), transparent, transparent, transparent, var(--neon-blue));
+  transform-origin: center;
+  animation: rotate 4s linear infinite;
+  z-index: -1;
+}
+
+.login-box::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 8px;
+  background: var(--card-dark);
+  z-index: -1;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.login-header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Replace the heart-icon class with black-star */
+.black-star {
+  color: var(--ghana-yellow); /* Ghana flag yellow */
+  margin: 0 8px;
+  animation: pulse 1.5s infinite;
+}
+
+.black-star.left {
+  animation-delay: 0s;
+}
+
+.black-star.right {
+  animation-delay: 0.75s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+.login-error {
+  background-color: rgba(206, 17, 38, 0.2);
+  border-left: 3px solid var(--accent-color);
+  color: #ff4d6d;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 10px rgba(77, 232, 244, 0.3);
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  display: flex;
+}
+
+.sign-in-button {
+  background-color: var(--neon-blue);
+  color: var(--text-dark);
+  border: none;
+  padding: 12px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 5px;
+}
+
+.sign-in-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgb(255, 255, 255);
+}
+
+.sign-in-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.forgot-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signup-link {
+  color: var(--neon-pink);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.forgot-link:hover,
+.signup-link:hover {
+  color: white;
+}
+
+/* Responsive styling */
+@media (max-width: 480px) {
+  .login-box {
+    width: 280px;
+    padding: 25px 20px;
+  }
+  
+  .login-collapsed {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+}

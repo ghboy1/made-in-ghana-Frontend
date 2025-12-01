@@ -1,0 +1,1048 @@
+/* Main top bar container */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #21543d, #1a422f);
+  color: white;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Ghana theme colors */
+:root {
+  --ghana-red: #ce1126;
+  --ghana-yellow: #fcd116;
+  --ghana-green: #006b3f;
+  --ghana-black: #000000;
+  --accent-color: #fcd116;
+}
+
+/* Ghana flag colors */
+:root {
+  --ghana-red: #ce1126;
+  --ghana-yellow: #fcd116;
+  --ghana-green: #006b3f;
+  --ghana-black: #000000;
+}
+
+/* Left section */
+.top-bar__left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+/* Logo improvements */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+  color: var(--ghana-yellow);
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-effect {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--ghana-yellow);
+  transition: width 0.3s ease;
+}
+
+.logo:hover .logo-effect {
+  width: 100%;
+}
+
+/* Address input group styling */
+.delivery-info {
+  position: relative;
+  margin-left: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.delivery-label {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.address-input-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.digital-address-input {
+  padding: 0.5rem;
+  border: 1px solid #555;
+  border-radius: 4px;
+  width: 180px;
+  background-color: #f8f8f8;
+  transition: all 0.3s;
+}
+
+.digital-address-input:focus {
+  border-color: var(--ghana-yellow);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(252, 209, 22, 0.3);
+}
+
+.update-address-btn {
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  background-color: var(--ghana-yellow);
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.update-address-btn:hover {
+  background-color: #e0b800;
+}
+
+.address-error {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: #ff6b6b;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.has-error .digital-address-input {
+  border-color: #ff6b6b;
+}
+
+.update-success {
+  animation: successPulse 2s ease-in-out;
+}
+
+@keyframes successPulse {
+  0% { background-color: transparent; }
+  30% { background-color: rgba(0, 128, 0, 0.2); }
+  100% { background-color: transparent; }
+}
+
+/* Center section */
+.top-bar__center {
+  flex: 1;
+  display: flex;
+}
+
+/* Ghana Regions Dropdown Container */
+.region-dropdown-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px; /* Reduced from 10px */
+}
+
+.region-dropdown-container .black-star {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #1d1c1c;
+  font-size: 0.9rem; /* Reduced from 1rem */
+  pointer-events: none;
+}
+
+.region-dropdown {
+  padding: 8px 12px; /* Reduced from 12px */
+  border: none;
+  background: #ce1126;
+  color: #000;
+  font-weight: 600;
+  border-radius: 20px 0 0 20px; /* Reduced from 25px */
+  cursor: pointer;
+  transition: background 0.2s ease;
+  padding-left: 35px; /* Adjusted for smaller star */
+  font-size: 0.85rem; /* Reduced from 0.9rem */
+}
+
+.region-dropdown:hover {
+  background: #cbb404;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 15px; /* Reduced from 25px */
+  overflow: hidden;
+  background: #027016;
+  box-shadow: 0 4px 15px rgba(197, 6, 6, 0.923);
+  position: relative;
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.search-bar input {
+  background: hsl(0, 0%, 0%);
+  padding: 8px 8px 8px 35px;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.993);
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  z-index: 1100; /* Increased z-index to make sure it appears above other elements */
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.search-suggestions li {
+  padding: 10px 15px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.85rem;
+}
+
+.search-suggestions li:hover {
+  background: #f8f8f8;
+  color: var(--ghana-green);
+  font-weight: 500;
+}
+
+.search-button {
+  background: var(--ghana-yellow);
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 0 15px 15px 0;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:hover {
+  background: var(--ghana-green);
+  color: white;
+}
+
+/* Ghana Company Showcase */
+.ghana-company-showcase {
+  flex: 1;
+  position: relative;
+  border-radius: 0 8px 8px 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.showcase-input-wrapper {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: flex;
+}
+
+/* Ghana flag glowing border */
+.showcase-input-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    var(--ghana-red),
+    var(--ghana-yellow),
+    var(--ghana-green),
+    var(--ghana-black),
+    var(--ghana-green),
+    var(--ghana-yellow),
+    var(--ghana-red)
+  );
+  border-radius: 0 8px 8px 0;
+  background-size: 400%;
+  z-index: -1;
+  animation: animateGhanaFlag 10s linear infinite;
+  filter: blur(2px);
+}
+
+@keyframes animateGhanaFlag {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* The input field */
+.showcase-input {
+  flex: 1;
+  height: 40px;
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  background-color: #222;
+  color: white;
+  font-size: 14px;
+}
+
+/* Animated placeholder text */
+.showcase-input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  animation: shimmerText 2s infinite;
+  background: linear-gradient(90deg, #ffffff, var(--ghana-yellow), #ffffff);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes shimmerText {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* Search button with Ghana colors */
+.showcase-button {
+  height: 40px;
+  width: 50px;
+  border: none;
+  background: linear-gradient(
+    45deg,
+    var(--ghana-red),
+    var(--ghana-green)
+  );
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0 8px 8px 0;
+  overflow: hidden;
+}
+
+/* Button shine effect */
+.showcase-button::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shineEffect 3s infinite;
+}
+
+@keyframes shineEffect {
+  0% {
+    left: -150%;
+    top: -60%;
+  }
+  100% {
+    left: 100%;
+    top: 100%;
+  }
+}
+
+/* Star effect for the Ghana flag */
+.ghana-flag-glow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--ghana-black);
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  opacity: 0;
+  animation: starPulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes starPulse {
+  0%, 100% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+/* Right section */
+.top-bar__right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px; /* Reduced from 20px */
+}
+
+/* Account dropdown improvements */
+.account-lists {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.account-lists:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.user-icon {
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
+}
+
+.account-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting {
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.account-label {
+  font-weight: bold;
+}
+
+.account-lists-container {
+  position: relative;
+}
+
+/* Account dropdown - REDUCED SIZE */
+.account-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 350px; /* REDUCED from 500px */
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  color: #333;
+  overflow: hidden;
+  animation: dropdownFadeIn 0.2s ease-out;
+  padding-top: 8px; /* REDUCED from 10px */
+  margin-top: -8px; /* REDUCED from -10px */
+}
+
+/* Reduce header padding */
+.account-dropdown__header {
+  padding: 0.75rem; /* REDUCED from 1rem */
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #eee;
+}
+
+/* Reduce user info font sizes */
+.user-info {
+  margin-bottom: 1rem;
+}
+
+.user-name {
+  font-size: 1rem; /* REDUCED from 1.2rem */
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.1rem; /* REDUCED from 0.2rem */
+}
+
+.user-email {
+  font-size: 0.8rem; /* REDUCED from 0.9rem */
+  color: #666;
+  display: block;
+}
+
+.user-role {
+  display: inline-block;
+  background-color: var(--ghana-green);
+  color: white;
+  font-size: 0.7rem; /* REDUCED from 0.75rem */
+  padding: 0.15rem 0.4rem; /* REDUCED from 0.2rem 0.5rem */
+  border-radius: 12px;
+  margin-top: 0.4rem; /* REDUCED from 0.5rem */
+}
+
+/* Reduce action buttons */
+.account-btn, .admin-btn, .sign-out-btn, .sign-in-btn {
+  padding: 0.4rem 0.8rem; /* REDUCED from 0.5rem 1rem */
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  font-size: 0.85rem; /* Added smaller font */
+}
+
+.account-btn {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.admin-btn {
+  background-color: var(--ghana-green);
+  color: white;
+  border: none;
+}
+
+.sign-out-btn {
+  background-color: var(--ghana-yellow);
+  color: #333;
+  border: none;
+}
+
+.sign-in-btn {
+  display: block;
+  width: 100%;
+  background-color: var(--ghana-yellow);
+  color: #333;
+  border: none;
+  padding: 0.6rem; /* REDUCED from 0.75rem */
+  font-size: 0.9rem; /* REDUCED from 1rem */
+  margin-bottom: 1rem;
+}
+
+.account-btn:hover, .admin-btn:hover, .sign-out-btn:hover, .sign-in-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-btn:hover {
+  background-color: #00563c;
+}
+
+.sign-out-btn:hover {
+  background-color: #e0b800;
+}
+
+.new-customer {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Reduce body padding and font sizes */
+.account-dropdown__body {
+  display: flex;
+  padding: 0.75rem; /* REDUCED from 1rem */
+}
+
+.account-dropdown__lists, .account-dropdown__account {
+  flex: 1;
+  padding: 0 0.75rem; /* REDUCED from 0 1rem */
+}
+
+.account-dropdown__lists {
+  border-right: 1px solid #eee;
+}
+
+.account-dropdown__lists h3, .account-dropdown__account h3 {
+  font-size: 0.9rem; /* REDUCED from 1rem */
+  margin-bottom: 0.6rem; /* REDUCED from 0.75rem */
+  color: #333;
+}
+
+.account-dropdown__lists ul, .account-dropdown__account ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.account-dropdown__lists li, .account-dropdown__account li {
+  margin-bottom: 0.5rem;
+}
+
+.account-dropdown__lists a, .account-dropdown__account a {
+  color: #444;
+  text-decoration: none;
+  font-size: 0.8rem; /* REDUCED from 0.9rem */
+  display: block;
+  padding: 0.3rem 0; /* REDUCED from 0.4rem 0 */
+  transition: color 0.2s;
+}
+
+.account-dropdown__lists a:hover, .account-dropdown__account a:hover {
+  color: var(--ghana-green);
+}
+
+/* Reduce the padding for the admin item */
+.admin-menu-item {
+  border-left: 3px solid var(--ghana-green);
+  padding-left: 0.4rem !important; /* REDUCED from 0.5rem */
+  background-color: rgba(0, 107, 63, 0.05);
+}
+
+.admin-link {
+  color: var(--ghana-green) !important;
+  font-weight: bold;
+  display: flex !important;
+  align-items: center;
+}
+
+/* Adjust the menu icons */
+.menu-icon {
+  margin-right: 0.4rem; /* REDUCED from 0.5rem */
+  font-size: 0.8rem; /* REDUCED from 0.9rem */
+}
+
+/* Shopping cart improvements */
+.shopping-basket {
+  position: relative;
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.cart-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cart-icon-container {
+  position: relative;
+  margin-right: 0.5rem;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--ghana-yellow);
+  color: black;
+  font-size: 0.75rem;
+  font-weight: bold;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Settings dropdown improvements */
+.settings-container {
+  position: relative;
+}
+
+.settings-selector {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  gap: 5px;
+}
+
+.settings-selector:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.settings-dropdown {
+  position: fixed;
+  top: 60px; /* Adjust based on your top bar height */
+  right: 180px; /* Position from right edge */
+  width: 280px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1010; /* Higher than other dropdowns */
+  color: #333;
+  overflow: hidden;
+  animation: dropdownFadeIn 0.2s ease-out;
+  padding: 15px;
+}
+
+.settings-dropdown h3 {
+  color: var(--ghana-green);
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 8px;
+}
+
+.language-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.language-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.language-options label:hover {
+  background-color: #f5f5f5;
+}
+
+.language-options input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #aaa;
+  border-radius: 50%;
+  margin: 0;
+  position: relative;
+}
+
+.language-options input[type="radio"]:checked {
+  border-color: var(--ghana-green);
+}
+
+.language-options input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--ghana-green);
+}
+
+.currency-selector {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.currency-selector:focus {
+  outline: none;
+  border-color: var(--ghana-green);
+  box-shadow: 0 0 0 2px rgba(0, 107, 63, 0.1);
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-cancel, .btn-save {
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cancel {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn-save {
+  background-color: var(--ghana-green);
+  color: white;
+  border: none;
+}
+
+.btn-cancel:hover {
+  background-color: #e5e5e5;
+}
+
+.btn-save:hover {
+  background-color: #005a33;
+}
+
+/* Add overlay when settings dropdown is open */
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1005;
+  display: none;
+}
+
+.settings-overlay.active {
+  display: block;
+}
+
+/* Media queries for responsive positioning */
+@media (max-width: 1200px) {
+  .settings-dropdown {
+    right: 120px;
+  }
+}
+
+@media (max-width: 992px) {
+  .settings-dropdown {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  .account-dropdown {
+    width: 320px; /* REDUCED from previous media query value */
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .settings-dropdown {
+    width: 90%;
+    max-width: 280px;
+  }
+  .account-dropdown {
+    width: 280px; /* REDUCED */
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .top-bar {
+    padding: 0.5rem;
+  }
+  
+  .delivery-info {
+    margin-left: 1rem;
+  }
+  
+  .digital-address-input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 992px) {
+  .top-bar {
+    flex-wrap: wrap;
+  }
+  
+  .top-bar__left, .top-bar__center, .top-bar__right {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .account-dropdown {
+    width: 90%;
+    max-width: 500px;
+    right: 5%;
+    left: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    padding: 8px; /* Reduced from 15px */
+  }
+  .search-bar {
+    width: 100%;
+    margin: 6px 0; /* Reduced from 10px */
+  }
+  .top-bar__right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .settings-dropdown,
+  .account-dropdown {
+    position: static;
+    width: 100%;
+    margin-top: 8px; /* Reduced from 10px */
+  }
+  .account-dropdown__body {
+    flex-direction: column;
+    gap: 15px; /* Reduced from 20px */
+  }
+  
+  .account-dropdown__body {
+    flex-direction: column;
+  }
+  
+  .account-dropdown__lists {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .account-btn, .admin-btn, .sign-out-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .delivery-info {
+    display: none;
+  }
+  .showcase-input::placeholder {
+    font-size: 12px;
+  }
+  
+  .ghana-flag-glow {
+    display: none;
+  }
+}
+
+/* Add to TopBar.css */
+.user-actions {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+}
+
+.user-info {
+  margin-bottom: 10px;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.user-email {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.account-btn, .admin-btn, .sign-out-btn {
+  padding: 8px 12px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.account-btn {
+  background-color: #f0f0f0;
+  color: #111;
+  border: 1px solid #ddd;
+}
+
+.admin-btn {
+  background-color: #232f3e;
+  color: white;
+  border: 1px solid #232f3e;
+}
+
+.sign-out-btn {
+  background-color: #f0c14b;
+  color: #111;
+  border: 1px solid #a88734;
+}
+
+.admin-link {
+  font-weight: bold;
+  color: #e47911;
+}
+
+
+

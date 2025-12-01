@@ -1,0 +1,100 @@
+.manufacturer-registration {
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.manufacturer-registration h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.manufacturer-registration p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #444;
+  font-size: 14px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+input[type="file"] {
+  padding: 5px 0;
+  border: none; /* Remove default border for file inputs */
+}
+
+.submit-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+.submit-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #d32f2f;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.success {
+  color: #388e3c;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}

@@ -1,0 +1,123 @@
+/* Common styling for region cards across the application */
+
+.region-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.region-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.region-card h5 {
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.region-card p {
+  color: #6c757d;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.region-card .btn {
+  transition: all 0.3s ease;
+}
+
+.region-card .btn:hover {
+  transform: translateY(-2px);
+}
+
+.region-actions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Region container in RegionProducts.js */
+.region-container {
+  max-width: 1200px;
+}
+
+.region-header {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid;
+}
+
+.region-header h1 {
+  font-weight: 700;
+}
+
+.region-description {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.region-tabs .nav-item .nav-link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.famous-products-list li {
+  margin-bottom: 10px;
+}
+
+.region-info-body {
+  line-height: 1.6;
+}
+
+/* Home page regions section */
+.regions-section {
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.region-highlight-card {
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.region-highlight-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.region-highlight-card .card-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.region-products {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.region-products ul {
+  padding-left: 20px;
+  margin-top: 5px;
+}

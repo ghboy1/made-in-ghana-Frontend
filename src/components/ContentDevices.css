@@ -1,0 +1,269 @@
+
+  .content-devices-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .devices-header {
+    margin-bottom: 2rem;
+  }
+  
+  .devices-header h1 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .device-management {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+  
+  .devices-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .device-card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .device-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+  }
+  
+  .device-info h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .device-os {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .device-location {
+    color: #444;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .device-status {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .primary-badge {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+  }
+  
+  .activity {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .device-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .action-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .set-primary {
+    background: rgba(0, 107, 63, 0.1);
+    color: var(--secondary-color);
+  }
+  
+  .set-primary:hover {
+    background: var(--secondary-color);
+    color: white;
+  }
+  
+  .remove {
+    background: rgba(200, 16, 46, 0.1);
+    color: var(--accent-color);
+  }
+  
+  .remove:hover {
+    background: var(--accent-color);
+    color: white;
+  }
+  
+  .content-access {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    height: fit-content;
+  }
+  
+  .access-controls {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .control-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .toggle-switch label {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+  .toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--secondary-color);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(25px);
+  }
+  
+  .configure-btn {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    padding: 0.5rem 0;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .confirmation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: flex-end;
+  }
+  
+  .cancel-btn {
+    background: #f0f0f0;
+    color: #333;
+  }
+  
+  .confirm-btn {
+    background: var(--accent-color);
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .device-management {
+      grid-template-columns: 1fr;
+    }
+  
+    .device-card {
+      grid-template-columns: 1fr;
+    }
+  
+    .device-actions {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .content-devices-container {
+      background: var(--dark-bg);
+      color: white;
+    }
+  
+    .device-card,
+    .control-card {
+      background: #2a2a2a;
+    }
+  
+    .content-access {
+      background: #333;
+    }
+  
+    .device-os,
+    .device-location,
+    .activity {
+      color: #ccc;
+    }
+  }

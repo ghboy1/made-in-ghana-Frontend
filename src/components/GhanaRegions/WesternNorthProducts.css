@@ -1,0 +1,772 @@
+/* Western North Region specific styling with forest/cocoa theme */
+
+.western-north-region {
+  background-color: #fcfaf5;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                    url('https://via.placeholder.com/1500x500?text=Cocoa+Plantation');
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: opacity 0.3s ease;
+  border-top: 5px solid #5d4037;
+  border-bottom: 5px solid #5d4037;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0.7;
+}
+
+.western-north-region .region-header {
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid rgba(93, 64, 55, 0.3);
+}
+
+.western-north-region .back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s;
+  border-color: #5d4037;
+  color: #5d4037;
+}
+
+.western-north-region .back-button:hover {
+  transform: translateX(-3px);
+  background-color: #5d4037;
+  color: white;
+}
+
+.western-north-region .region-title {
+  color: #4e342e;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.western-north-region .region-subtitle {
+  color: #6d4c41;
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.western-north-region .region-icon {
+  color: #33691e;
+}
+
+/* Unique forest divider */
+.forest-divider {
+  height: 10px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2333691e' fill-opacity='0.3' d='M0,192L60,176C120,160,240,128,360,133.3C480,139,600,181,720,197.3C840,213,960,203,1080,186.7C1200,171,1320,149,1380,138.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  margin: 15px 0;
+  opacity: 0.7;
+}
+
+/* View toggle styling */
+.western-north-region .view-toggle {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.western-north-region .view-toggle .nav-link {
+  color: #5d4037;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.western-north-region .view-toggle .nav-link:hover:not(.active) {
+  background-color: rgba(93, 64, 55, 0.1);
+}
+
+.western-north-region .view-toggle .nav-link.active {
+  background-color: #5d4037;
+  border-color: #5d4037;
+  color: white;
+  box-shadow: 0 4px 8px rgba(93, 64, 55, 0.3);
+}
+
+/* Products section styling */
+.western-north-region .products-section {
+  animation: fadeIn 0.5s ease;
+}
+
+.western-north-region .category-title {
+  color: #5d4037;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  padding-left: 12px;
+  border-left: 4px solid #33691e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.western-north-region .product-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.western-north-region .product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(93, 64, 55, 0.15) !important;
+}
+
+.western-north-region .product-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.western-north-region .product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.western-north-region .product-card:hover .product-image {
+  transform: scale(1.08);
+}
+
+.western-north-region .discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 8px;
+  background-color: #c62828;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.western-north-region .product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #4e342e;
+}
+
+.western-north-region .product-description {
+  font-size: 0.85rem;
+  color: #6d4c41;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.western-north-region .price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #5d4037;
+}
+
+.western-north-region .original-price {
+  font-size: 0.9rem;
+}
+
+.western-north-region .rating {
+  color: #ff8f00;
+  font-weight: 600;
+}
+
+.western-north-region .add-to-cart-btn {
+  background-color: #5d4037;
+  border-color: #5d4037;
+  transition: all 0.3s ease;
+}
+
+.western-north-region .add-to-cart-btn:hover {
+  background-color: #4e342e;
+  border-color: #4e342e;
+  transform: translateY(-2px);
+}
+
+.western-north-region .view-details-btn:hover {
+  color: #5d4037;
+  border-color: #5d4037;
+  background-color: rgba(93, 64, 55, 0.05);
+}
+
+/* List view for products */
+.western-north-region .product-list-view .product-list-card {
+  flex-direction: row;
+}
+
+.western-north-region .product-list-card .product-image-container {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.western-north-region .product-list-card .product-image {
+  height: 100%;
+  width: 100%;
+}
+
+.western-north-region .product-list-card .card-body {
+  flex: 1;
+}
+
+/* Region tabs styling */
+.western-north-region .region-tabs {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.western-north-region .region-tabs .nav-link {
+  color: #5d4037;
+  border: none;
+  padding: 12px 20px;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.western-north-region .region-tabs .nav-link:hover:not(.active) {
+  background-color: rgba(93, 64, 55, 0.05);
+}
+
+.western-north-region .region-tabs .nav-link.active {
+  color: #5d4037;
+  background: transparent;
+  border-bottom: 3px solid #33691e;
+  font-weight: bold;
+}
+
+.western-north-region .tab-content {
+  padding: 20px 0;
+  animation: fadeIn 0.5s ease;
+}
+
+.western-north-region .overview-title {
+  color: #4e342e;
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: inline-block;
+  position: relative;
+}
+
+/* Section headers with tree-inspired design */
+.western-north-region .culture-header,
+.western-north-region .attractions-header,
+.western-north-region .history-header {
+  color: #4e342e;
+  font-weight: 700;
+  padding-left: 45px;
+  position: relative;
+}
+
+.western-north-region .culture-header:before,
+.western-north-region .attractions-header:before,
+.western-north-region .history-header:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  background-color: #33691e;
+  opacity: 0.2;
+  border-radius: 50%;
+}
+
+.western-north-region .culture-header:after,
+.western-north-region .attractions-header:after,
+.western-north-region .history-header:after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background-color: #33691e;
+  border-radius: 50%;
+}
+
+/* Timeline styles */
+.western-north-region .timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.western-north-region .timeline:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  background: #8d6e63;
+  left: 50px;
+  top: 0;
+}
+
+.western-north-region .timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 100px;
+}
+
+.western-north-region .timeline-date {
+  position: absolute;
+  left: 0;
+  width: 80px;
+  text-align: right;
+  font-weight: bold;
+  color: #5d4037;
+}
+
+.western-north-region .timeline-content {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 3px solid #8d6e63;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.western-north-region .timeline-content h4 {
+  margin-top: 0;
+  color: #4e342e;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Image with overlay */
+.western-north-region .image-frame {
+  padding: 8px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.western-north-region .landscape-image {
+  transform: scale(1);
+  transition: transform 1s ease;
+}
+
+.western-north-region .image-frame:hover .landscape-image {
+  transform: scale(1.03);
+}
+
+.western-north-region .image-overlay {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  padding: 15px;
+  color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.western-north-region .image-frame:hover .image-overlay {
+  opacity: 1;
+}
+
+.western-north-region .overlay-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* Culture cards */
+.western-north-region .culture-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  background-color: #fff;
+}
+
+.western-north-region .culture-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.western-north-region .culture-card-header {
+  background: linear-gradient(135deg, #5d4037, #8d6e63);
+  color: white;
+  font-weight: 600;
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.western-north-region .culture-card .card-body {
+  padding: 20px;
+}
+
+.western-north-region .culture-card img {
+  transition: transform 0.5s;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.western-north-region .culture-card:hover img {
+  transform: scale(1.03);
+}
+
+.western-north-region .festival-date {
+  color: #5d4037;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Indigenous knowledge section */
+.western-north-region .indigenous-knowledge {
+  background-color: #f9f7f1;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #8d6e63;
+}
+
+.western-north-region .indigenous-knowledge h4 {
+  color: #4e342e;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.western-north-region .knowledge-card {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.western-north-region .knowledge-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.western-north-region .knowledge-card h5 {
+  color: #5d4037;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+/* Attraction cards */
+.western-north-region .attraction-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.western-north-region .attraction-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 25px rgba(93, 64, 55, 0.2);
+}
+
+.western-north-region .attraction-img-container {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.western-north-region .attraction-img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.western-north-region .attraction-card:hover .attraction-img-container img {
+  transform: scale(1.1);
+}
+
+.western-north-region .attraction-card .card-title {
+  color: #4e342e;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.western-north-region .attraction-meta {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #d7ccc8;
+  font-size: 0.85rem;
+}
+
+/* Attraction type badge */
+.western-north-region .attraction-type {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(51, 105, 30, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Eco-tourism section */
+.western-north-region .eco-tourism {
+  background-color: #f1f8e9;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #33691e;
+}
+
+.western-north-region .eco-tourism h4 {
+  color: #33691e;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.western-north-region .eco-tourism-description {
+  color: #33691e;
+  font-style: italic;
+}
+
+.western-north-region .eco-initiative {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.western-north-region .eco-initiative:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.western-north-region .eco-icon {
+  color: #33691e;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.western-north-region .eco-initiative h5 {
+  color: #33691e;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Historical sites section */
+.western-north-region .historical-sites {
+  background-color: #efebe9;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.western-north-region .historical-sites h4 {
+  color: #5d4037;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.western-north-region .historical-site-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  border-left: 3px solid #8d6e63;
+  transition: transform 0.3s;
+}
+
+.western-north-region .historical-site-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.western-north-region .historical-site-card h5 {
+  color: #5d4037;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Region highlights */
+.western-north-region .region-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.western-north-region .highlight-item {
+  display: flex;
+  align-items: center;
+  background-color: #f1f8e9;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.western-north-region .highlight-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.western-north-region .highlight-icon {
+  color: #33691e;
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+/* Neighboring regions */
+.western-north-region .neighboring-regions {
+  background-color: #efebe9;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 3px solid #5d4037;
+}
+
+.western-north-region .neighboring-regions h5 {
+  color: #5d4037;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.western-north-region .region-nav-btn {
+  transition: all 0.3s;
+  border-color: #8d6e63;
+  color: #5d4037;
+}
+
+.western-north-region .region-nav-btn:hover {
+  background-color: #5d4037;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Climate info */
+.western-north-region .climate-info {
+  background-color: #f1f8e9;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 3px solid #33691e;
+}
+
+.western-north-region .climate-info h5 {
+  color: #33691e;
+  font-weight: 600;
+}
+
+/* Action button */
+.western-north-region .action-button {
+  background-color: #5d4037;
+  border-color: #5d4037;
+  padding: 10px 25px;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+.western-north-region .action-button:hover {
+  background-color: #4e342e;
+  border-color: #4e342e;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(93, 64, 55, 0.2);
+}
+
+/* Toast notification styling */
+.western-north-region .toast-header {
+  background-color: #efebe9;
+  color: #4e342e;
+  border-bottom: 1px solid #d7ccc8;
+}
+
+.western-north-region .product-price {
+  color: #5d4037;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .western-north-region .region-header {
+    padding-top: 30px;
+  }
+  
+  .western-north-region .region-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .western-north-region {
+    padding: 20px 15px;
+  }
+  
+  .western-north-region .product-list-card {
+    flex-direction: column;
+  }
+  
+  .western-north-region .product-list-card .product-image-container {
+    width: 100%;
+  }
+  
+  .western-north-region .timeline-item {
+    padding-left: 70px;
+  }
+  
+  .western-north-region .timeline-date {
+    width: 60px;
+    font-size: 0.9rem;
+  }
+  
+  .western-north-region .region-highlights {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .western-north-region .highlight-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .western-north-region .region-tabs .nav-link {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

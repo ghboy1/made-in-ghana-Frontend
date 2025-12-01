@@ -1,0 +1,39 @@
+{
+  "exercises": [
+    {
+      "id": 1,
+      "title": "Hello World",
+      "description": "Your first Python program!",
+      "code": "print(\"Hello, Ghana!\")",
+      "difficulty": "Beginner"
+    },
+    {
+      "id": 2,
+      "title": "Variables",
+      "description": "Store and manipulate data",
+      "code": "name = \"Kofi\"\nage = 12\nprint(f\"Hello, my name is {name} and I am {age} years old.\")",
+      "difficulty": "Beginner"
+    },
+    {
+      "id": 3,
+      "title": "Loops",
+      "description": "Repeat actions multiple times",
+      "code": "for i in range(5):\n    print(f\"Count: {i}\")",
+      "difficulty": "Beginner"
+    },
+    {
+      "id": 4,
+      "title": "Conditionals",
+      "description": "Make decisions in your code",
+      "code": "age = 15\nif age >= 18:\n    print(\"You are an adult\")\nelse:\n    print(\"You are a minor\")",
+      "difficulty": "Intermediate"
+    },
+    {
+      "id": 5,
+      "title": "Functions",
+      "description": "Create reusable blocks of code",
+      "code": "def greet(name):\n    return f\"Hello, {name}!\"\n\nprint(greet(\"Ama\"))",
+      "difficulty": "Intermediate"
+    }
+  ]
+}

@@ -1,0 +1,316 @@
+/* Manufacturers Page Styles */
+
+.manufacturers-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Hero Section */
+.manufacturers-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('./image/ghana-factory.svg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.manufacturers-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.manufacturers-hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.manufacturers-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Filters Section */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 15px;
+}
+
+.search-box {
+  flex: 1 1 300px;
+}
+
+.search-box input {
+  padding: 10px 15px;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.filter-dropdown {
+  flex: 0 1 200px;
+  display: flex;
+  align-items: center;
+}
+
+.filter-dropdown label {
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.filter-dropdown select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  min-width: 150px;
+  font-size: 1rem;
+}
+
+/* Manufacturers Grid */
+.manufacturers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.manufacturer-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.manufacturer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  height: 160px;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.company-logo {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.card-body {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.card-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.card-body .location {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.card-body .description {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.stars {
+  display: flex;
+}
+
+.star {
+  color: #ddd;
+  margin-right: 2px;
+}
+
+.star.filled {
+  color: #FFD700;
+}
+
+.card-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #eee;
+}
+
+.website-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ce1126; /* Ghana flag red */
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.website-btn:hover {
+  background-color: #a70e1b;
+}
+
+/* Section Headers */
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ce1126;
+  color: #2c3e50;
+}
+
+section p {
+  margin-bottom: 20px;
+}
+
+/* Manufacturing Sectors */
+.manufacturing-sectors {
+  margin-bottom: 40px;
+}
+
+.sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.sector-card {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #ce1126;
+}
+
+.sector-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.sector-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Regional Hubs */
+.regional-hubs {
+  margin-bottom: 40px;
+}
+
+.hubs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.hub-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hub-card h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.hub-card h4 {
+  font-size: 1.1rem;
+  color: #ce1126;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.hub-card p {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.specialties h5 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.specialties ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.specialties li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filters-container {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .search-box input {
+    width: 100%;
+  }
+  
+  .manufacturers-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .manufacturers-hero h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .manufacturers-grid,
+  .sectors-grid,
+  .hubs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .manufacturers-hero {
+    padding: 40px 15px;
+  }
+}

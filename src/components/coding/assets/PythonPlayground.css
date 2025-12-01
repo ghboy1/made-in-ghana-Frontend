@@ -1,0 +1,201 @@
+/* Python Playground Styles */
+
+.python-playground {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+.playground-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.playground-header .icon {
+  color: #3776AB;
+  font-size: 2rem;
+}
+
+.playground-header h2 {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+/* Editor card styling */
+.code-editor-card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.code-editor-card .card-header {
+  background-color: #3776AB;
+  color: white;
+  font-weight: 600;
+}
+
+.code-editor {
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  resize: none;
+  border: none;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.code-editor:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Output card styling */
+.output-card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.output-card .card-header {
+  background-color: #6c757d;
+  color: white;
+  font-weight: 600;
+}
+
+.output-display {
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding: 1rem;
+  margin: 0;
+  min-height: 120px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+/* Examples card styling */
+.examples-card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.examples-card .card-header {
+  background-color: #FFD747;
+  color: #212529;
+  font-weight: 600;
+}
+
+.examples-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.example-item {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.example-item:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.example-item.active {
+  background-color: rgba(55, 118, 171, 0.1);
+  border-left: 3px solid #3776AB;
+}
+
+.example-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.example-description {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 0.25rem;
+}
+
+.example-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.example-badge.beginner {
+  background-color: #28a745;
+  color: white;
+}
+
+.example-badge.intermediate {
+  background-color: #fd7e14;
+  color: white;
+}
+
+/* Help card styling */
+.help-card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.help-card .card-header {
+  background-color: #17a2b8;
+  color: white;
+  font-weight: 600;
+}
+
+.help-list {
+  padding-left: 1.25rem;
+}
+
+.help-list li {
+  margin-bottom: 0.5rem;
+}
+
+.help-list code {
+  background-color: #f8f9fa;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Ghana-themed override */
+.btn-success {
+  background-color: #006b3f;
+  border-color: #006b3f;
+}
+
+.btn-success:hover, .btn-success:focus {
+  background-color: #00552f;
+  border-color: #00552f;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .examples-card, .help-card {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .python-playground {
+    padding: 1rem;
+  }
+}

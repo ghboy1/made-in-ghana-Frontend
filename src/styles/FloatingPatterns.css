@@ -1,0 +1,12 @@
+.floating-pattern {
+  position: absolute;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  pointer-events: none;
+  -webkit-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  transform-origin: center;
+  transition: all 7s ease-in-out;
+  z-index: 9999;
+}

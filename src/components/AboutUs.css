@@ -1,0 +1,173 @@
+/* About Us Container */
+.about-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro h1 {
+  font-size: 48px;
+  color: #0066cc;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Mission and Vision Sections */
+.mission-statement, .vision-statement {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission-statement h2, .vision-statement h2 {
+  font-size: 28px;
+  color: #0066cc;
+  margin-bottom: 15px;
+}
+
+.mission-statement p, .vision-statement p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Company History Section */
+.company-history {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-history h2 {
+  font-size: 28px;
+  color: #0066cc;
+  margin-bottom: 15px;
+}
+
+.company-history p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Team Members Section */
+.team-members {
+  margin-bottom: 40px;
+}
+
+.team-members h2 {
+  font-size: 28px;
+  color: #0066cc;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #0066cc;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.cta h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 12px 30px;
+  background-color: #fff;
+  color: #0066cc;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #004080;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 80%;
+  }
+}

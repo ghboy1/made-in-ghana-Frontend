@@ -1,0 +1,554 @@
+/* Add to: c:\Users\Admin\Desktop\APPLICATIONS FOLDE\made-in-ghana\made-in-ghana-Frontend\src\components\GhanaRegions\regions.css */
+
+/* Bono East Region specific styling with agricultural/market theme */
+.bono-east-region {
+  background-color: #fff8e1;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), 
+                    url('https://via.placeholder.com/1500x500?text=Bono+East+Region');
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0.7;
+}
+
+.bono-east-region .region-header {
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  text-align: center;
+  border-bottom: 1px dashed rgba(121, 85, 72, 0.3);
+}
+
+.bono-east-region .back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s;
+}
+
+.bono-east-region .back-button:hover {
+  transform: translateX(-3px);
+}
+
+.bono-east-region .region-title {
+  color: #795548;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.bono-east-region .region-subtitle {
+  color: #8d6e63;
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.bono-east-region .region-icon {
+  color: #ffb300;
+}
+
+/* View toggle styling */
+.bono-east-region .view-toggle {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.bono-east-region .view-toggle .nav-link {
+  color: #795548;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.bono-east-region .view-toggle .nav-link:hover:not(.active) {
+  background-color: rgba(121, 85, 72, 0.1);
+}
+
+.bono-east-region .view-toggle .nav-link.active {
+  background-color: #795548;
+  border-color: #795548;
+  color: white;
+  box-shadow: 0 4px 8px rgba(121, 85, 72, 0.2);
+}
+
+/* Products section styling */
+.bono-east-region .products-section {
+  animation: fadeIn 0.5s ease;
+}
+
+.bono-east-region .category-title {
+  color: #795548;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  padding-left: 12px;
+  border-left: 4px solid #ffb300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.bono-east-region .product-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.bono-east-region .product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(121, 85, 72, 0.15) !important;
+}
+
+.bono-east-region .product-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.bono-east-region .product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.bono-east-region .product-card:hover .product-image {
+  transform: scale(1.08);
+}
+
+.bono-east-region .discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 8px;
+  background-color: #d32f2f;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.bono-east-region .product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #5d4037;
+}
+
+.bono-east-region .product-description {
+  font-size: 0.85rem;
+  color: #6d4c41;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.bono-east-region .price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #795548;
+}
+
+.bono-east-region .original-price {
+  font-size: 0.9rem;
+}
+
+.bono-east-region .rating {
+  color: #ffb300;
+  font-weight: 600;
+}
+
+.bono-east-region .add-to-cart-btn {
+  background-color: #795548;
+  border-color: #795548;
+  transition: all 0.3s ease;
+}
+
+.bono-east-region .add-to-cart-btn:hover {
+  background-color: #5d4037;
+  border-color: #5d4037;
+  transform: translateY(-2px);
+}
+
+.bono-east-region .view-details-btn:hover {
+  color: #795548;
+  border-color: #795548;
+  background-color: rgba(121, 85, 72, 0.05);
+}
+
+/* List view for products */
+.bono-east-region .product-list-view .product-list-card {
+  flex-direction: row;
+}
+
+.bono-east-region .product-list-card .product-image-container {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.bono-east-region .product-list-card .product-image {
+  height: 100%;
+  width: 100%;
+}
+
+.bono-east-region .product-list-card .card-body {
+  flex: 1;
+}
+
+/* Region tabs styling */
+.bono-east-region .region-tabs {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.bono-east-region .region-tabs .nav-link {
+  color: #795548;
+  border: none;
+  padding: 12px 20px;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.bono-east-region .region-tabs .nav-link:hover:not(.active) {
+  background-color: rgba(121, 85, 72, 0.05);
+}
+
+.bono-east-region .region-tabs .nav-link.active {
+  color: #795548;
+  background: transparent;
+  border-bottom: 3px solid #ffb300;
+  font-weight: bold;
+}
+
+.bono-east-region .tab-content {
+  padding: 20px 0;
+  animation: fadeIn 0.5s ease;
+}
+
+.bono-east-region .overview-title {
+  color: #5d4037;
+  font-weight: 700;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ffb300;
+  display: inline-block;
+}
+
+/* Timeline styles */
+.bono-east-region .timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.bono-east-region .timeline:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  background: #ffb300;
+  left: 50px;
+  top: 0;
+}
+
+.bono-east-region .timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 100px;
+}
+
+.bono-east-region .timeline-date {
+  position: absolute;
+  left: 0;
+  width: 80px;
+  text-align: right;
+  font-weight: bold;
+  color: #795548;
+}
+
+.bono-east-region .timeline-content {
+  background: #fff8e1;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 3px solid #795548;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.bono-east-region .timeline-content h4 {
+  margin-top: 0;
+  color: #5d4037;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Culture cards */
+.bono-east-region .culture-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+}
+
+.bono-east-region .culture-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bono-east-region .culture-card-header {
+  background: linear-gradient(to right, #795548, #a1887f);
+  color: white;
+  font-weight: 600;
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.bono-east-region .culture-card .card-body {
+  padding: 20px;
+}
+
+.bono-east-region .culture-card img {
+  transition: transform 0.5s;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bono-east-region .culture-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Attraction cards */
+.bono-east-region .attraction-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.bono-east-region .attraction-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 25px rgba(121, 85, 72, 0.2);
+}
+
+.bono-east-region .attraction-img-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.bono-east-region .attraction-img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.bono-east-region .attraction-card:hover .attraction-img-container img {
+  transform: scale(1.1);
+}
+
+.bono-east-region .attraction-card .card-title {
+  color: #5d4037;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.bono-east-region .attraction-meta {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #d7ccc8;
+  font-size: 0.85rem;
+}
+
+/* Region highlights */
+.bono-east-region .region-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.bono-east-region .highlight-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff3e0;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bono-east-region .highlight-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bono-east-region .highlight-icon {
+  color: #ffb300;
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+/* Neighboring regions */
+.bono-east-region .neighboring-regions {
+  background-color: #fff3e0;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 3px solid #ffb300;
+}
+
+.bono-east-region .neighboring-regions h5 {
+  color: #795548;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.bono-east-region .region-nav-btn {
+  transition: all 0.3s;
+  border-color: #a1887f;
+  color: #795548;
+}
+
+.bono-east-region .region-nav-btn:hover {
+  background-color: #795548;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Image frame for region overview */
+.bono-east-region .image-frame {
+  padding: 8px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bono-east-region .landscape-image {
+  transform: scale(1);
+  transition: transform 1s ease;
+}
+
+.bono-east-region .image-frame:hover .landscape-image {
+  transform: scale(1.03);
+}
+
+/* Climate info */
+.bono-east-region .climate-info {
+  background-color: #f9f5eb;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 3px solid #a1887f;
+}
+
+.bono-east-region .climate-info h5 {
+  color: #5d4037;
+  font-weight: 600;
+}
+
+/* Action button */
+.bono-east-region .action-button {
+  background-color: #795548;
+  border-color: #795548;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+.bono-east-region .action-button:hover {
+  background-color: #5d4037;
+  border-color: #5d4037;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(121, 85, 72, 0.2);
+}
+
+/* Toast notification styling */
+.bono-east-region .toast-header {
+  background-color: #f9f5eb;
+  color: #5d4037;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.bono-east-region .product-price {
+  color: #795548;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .bono-east-region .region-header {
+    padding-top: 30px;
+  }
+  
+  .bono-east-region .region-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bono-east-region {
+    padding: 20px 15px;
+  }
+  
+  .bono-east-region .product-list-card {
+    flex-direction: column;
+  }
+  
+  .bono-east-region .product-list-card .product-image-container {
+    width: 100%;
+  }
+  
+  .bono-east-region .timeline-item {
+    padding-left: 70px;
+  }
+  
+  .bono-east-region .timeline-date {
+    width: 60px;
+    font-size: 0.9rem;
+  }
+  
+  .bono-east-region .region-highlights {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .bono-east-region .highlight-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .bono-east-region .region-tabs .nav-link {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

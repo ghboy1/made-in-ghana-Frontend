@@ -1,0 +1,340 @@
+/* General Styles */
+.hmenu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 100vh;
+  max-height: 100vh; /* Changed from fixed height */
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* Start off-screen by default */
+}
+
+.hmenu-container.open {
+  transform: translateX(0); /* Only visible when open class is applied */
+}
+
+/* Adding a small delay to prevent accidental closing */
+.hamburger-container:hover .hmenu-container {
+  transition-delay: 0.05s;
+}
+
+.hmenu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #232f3e; /* Amazon-like dark header */
+  color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: relative; /* Added for better positioning */
+}
+
+.greeting {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.close-btn:hover {
+  color: #ff9900; /* Amazon orange */
+}
+
+/* Back Button */
+.hmenu-back-button {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #111;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #eee;
+}
+
+.hmenu-arrow-prev::before {
+  content: '\002190'; /* Unicode left arrow (←) */
+  margin-right: 8px;
+}
+
+/* Search Field */
+.hmenu-search {
+  position: relative;
+  padding: 10px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.hmenu-search input {
+  width: 100%;
+  padding: 8px 32px 8px 8px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+.hmenu-search input:focus {
+  border-color: #ff9900; /* Amazon orange */
+}
+
+.clear-search {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Menu List */
+.hmenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hmenu-title {
+  font-family: "Georgia Pro", Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #111;
+  padding: 1rem;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #ddd;
+  letter-spacing: 0.02em;
+}
+
+.hmenu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.hmenu-item a {
+  font-family: "Georgia Pro", Georgia, serif;
+  flex: 1;
+  text-decoration: none;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.hmenu-item a:hover {
+  color: #ff9900;
+  text-decoration: underline;
+}
+
+/* Enhanced category styling */
+.hmenu-item.category a {
+  font-weight: 500;
+}
+
+.submenu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #666;
+}
+
+.arrow-right::after {
+  content: '\276F'; /* Unicode right arrow */
+}
+
+.hmenu-separator {
+  border-bottom: 1px solid #ddd;
+  margin: 8px 0;
+}
+
+/* User Profile Section */
+.user-profile-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1;
+  margin-right: 40px; /* Added space to prevent overlap with close button */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.user-avatar-placeholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #f0c14b;
+  color: #232f3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-weight: 500;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdown-arrow {
+  width: 12px;
+  height: 12px;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-arrow.down {
+  transform: rotate(45deg);
+}
+
+.dropdown-arrow.up {
+  transform: rotate(-135deg);
+}
+
+.user-dropdown {
+  position: absolute;
+  top: calc(100% + 5px); /* Added 5px gap */
+  left: 0;
+  right: 40px; /* Prevent extending too far right */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-dropdown a, 
+.user-dropdown button {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #232f3e;
+  font-size: 14px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.user-dropdown a:hover, 
+.user-dropdown button:hover {
+  background-color: #f9f9f9;
+}
+
+.logout-button {
+  color: #d13212 !important;
+  border-top: 1px solid #ddd !important;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+
+.login-button, 
+.signup-button {
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.login-button {
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  color: #111;
+}
+
+.signup-button {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: #232f3e;
+}
+
+/* Improved hover behaviors */
+.hamburger-container {
+  position: relative;
+  z-index: 1000;
+}
+
+.hamburger-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px 10px;
+  font-size: 0.95rem;
+}
+
+.hamburger-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Add mobile fallback - touch targets need to be at least 44px */
+@media (max-width: 768px) {
+  .hamburger-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* On mobile, add a slight delay to prevent accidental menu closing */
+  .hamburger-container .hmenu-container.open {
+    transition-delay: 0.1s;
+  }
+}
+
+/* Mobile touch handling improvements */
+@media (hover: none) {
+  /* For devices that don't support hover */
+  .hamburger-container {
+    /* Remove hover behavior for touch devices */
+    pointer-events: none;
+  }
+  
+  .hamburger-btn {
+    pointer-events: auto;
+  }
+  
+  /* Make the menu clickable on touch devices */
+  .hmenu-container {
+    pointer-events: auto;
+  }
+}

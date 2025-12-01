@@ -1,0 +1,246 @@
+/* Common styles for all education components */
+.education-section {
+  padding: 15px;
+}
+
+.content-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.content-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.content-list li:last-child {
+  border-bottom: none;
+}
+
+.content-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fffcfc;
+  text-decoration: none;
+  padding: 5px 0;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.content-link:hover {
+  color: #4a00e0;
+  transform: translateX(5px);
+}
+
+/* Specialty cards */
+.specialty-card {
+  transition: all 0.3s ease;
+}
+
+.specialty-card:hover {
+  transform: translateY(-5px);
+}
+
+.specialty-icon {
+  font-size: 2rem;
+  color: #4a00e0;
+}
+
+/* Program items */
+.program-item {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.program-item:last-child {
+  border-bottom: none;
+}
+
+/* Industry cards */
+.industry-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.industry-card:hover {
+  background-color: #e9ecef;
+  transform: translateY(-5px);
+}
+
+.small-list {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+/* Resource items */
+.resource-item {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.resource-item:last-child {
+  border-bottom: none;
+}
+
+/* Event cards */
+.event-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  height: 100%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.event-card:hover {
+  background-color: #e9ecef;
+  transform: translateY(-5px);
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #4a00e0;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: -15px;
+  right: 15px;
+}
+
+.event-date .day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.event-date .month {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.event-details {
+  margin-top: 10px;
+  color: #6c757d;
+}
+
+/* Quiz promo */
+.quiz-promo {
+  background-color: #f8f9fa;
+  border-left: 4px solid #4a00e0;
+}
+
+/* Culture cards */
+.culture-card {
+  background-color: #f8f9fa;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.culture-card:hover {
+  background-color: #e9ecef;
+}
+
+/* Region cards */
+.region-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.region-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.region-card h5 {
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.region-card p {
+  color: #6c757d;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.region-card .btn {
+  transition: all 0.3s ease;
+}
+
+.region-card .btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Theme cards */
+.theme-card {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 30px;
+}
+
+.theme-icon {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #4a00e0, #8e2de2);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Module items */
+.module-number {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #4a00e0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.module-item {
+  margin-bottom: 15px;
+}
+
+/* Resource boxes */
+.resource-box {
+  background-color: #f8f9fa;
+  border-left: 3px solid #198754;
+  height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .event-date {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: 15px;
+  }
+}

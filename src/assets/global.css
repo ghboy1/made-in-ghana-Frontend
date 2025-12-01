@@ -1,0 +1,361 @@
+/* Ghana-Themed Global CSS */
+
+:root {
+  /* Ghana Flag Colors */
+  --ghana-red: #ce1126;
+  --ghana-yellow: #fcd116;
+  --ghana-green: #006b3f;
+  
+  /* Extended Color Palette */
+  --ghana-black: #000000;
+  --ghana-dark: #212529;
+  --ghana-gray: #6c757d;
+  --ghana-light-gray: #f8f9fa;
+  --ghana-white: #ffffff;
+  
+  /* Accent Colors */
+  --accent-blue: #00539b;
+  --accent-orange: #ff7b25;
+  
+  /* Functional Colors */
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  
+  /* Typography */
+  --font-primary: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Poppins', var(--font-primary);
+  --font-body: var(--font-primary);
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2.5rem;
+  --spacing-xxl: 4rem;
+  
+  /* Borders */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-width: 1px;
+  
+  /* Shadows */
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.5;
+  color: var(--ghana-dark);
+  background-color:rgba(170, 136, 4, 0.278);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: rgb(0, 0, 0)
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+a {
+  color: rgba(219, 187, 5, 0.911);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--ghana-red);
+  text-decoration: underline;
+}
+
+/* Ghana-themed Button Styles */
+.btn {
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  transition: var(--transition-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
+}
+
+.btn-primary {
+  background-color: black;
+  border-color: rgba(0, 0, 0, 0.412);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #141414;
+  border-color: #000000;
+}
+
+.btn-secondary {
+  background-color: var(--ghana-yellow);
+  border-color: var(--ghana-yellow);
+  color: var(--ghana-dark);
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: #dbb100;
+  border-color: #dbb100;
+  color: var(--ghana-dark);
+}
+
+.btn-accent {
+  background-color: var(--ghana-red);
+  border-color: var(--ghana-red);
+}
+
+.btn-accent:hover, .btn-accent:focus {
+  background-color: #b30e21;
+  border-color: #b30e21;
+}
+
+.btn-outline-primary {
+  color: var(--ghana-green);
+  border-color: var(--ghana-green);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--ghana-green);
+  color: white;
+}
+
+/* Cards */
+.card {
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+  border: var(--border-width) solid rgba(0,0,0,0.125);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.card-header {
+  font-weight: 600;
+  border-bottom: var(--border-width) solid rgba(0,0,0,0.125);
+}
+
+.card-green {
+  border-top: 4px solid var(--ghana-green);
+}
+
+.card-red {
+  border-top: 4px solid var(--ghana-red);
+}
+
+.card-yellow {
+  border-top: 4px solid var(--ghana-yellow);
+}
+
+/* Navbar Styling */
+.navbar {
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar-ghana {
+  background-color: var(--ghana-white);
+  border-bottom: 3px solid var(--ghana-green);
+}
+
+/* Ghana-themed Accents */
+.ghana-flag-border {
+  border-top: 2px solid var(--ghana-red);
+  border-bottom: 2px solid var(--ghana-green);
+  position: relative;
+}
+
+.ghana-flag-border::after {
+  content: '';
+  height: 2px;
+  background-color: var(--ghana-yellow);
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  right: 0;
+}
+
+/* Form Styling */
+.form-control {
+  border-radius: var(--border-radius-md);
+  padding: 0.75rem;
+  border: var(--border-width) solid #ced4da;
+  transition: var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--ghana-green);
+  box-shadow: 0 0 0 0.2rem rgba(0, 107, 63, 0.25);
+}
+
+/* Tables */
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th {
+  background-color: var(--ghana-green);
+  color: white;
+  font-weight: 600;
+  text-align: left;
+  padding: var(--spacing-md);
+}
+
+.table td {
+  border-bottom: var(--border-width) solid #dee2e6;
+  padding: var(--spacing-md);
+}
+
+.table tr:nth-child(even) {
+  background-color: rgba(252, 209, 22, 0.1);
+}
+
+/* Badges */
+.badge-ghana-green {
+  background-color: var(--ghana-green);
+  color: white;
+}
+
+.badge-ghana-red {
+  background-color: var(--ghana-red);
+  color: white;
+}
+
+.badge-ghana-yellow {
+  background-color: var(--ghana-yellow);
+  color: var(--ghana-dark);
+}
+
+/* Ghana-themed loading spinner */
+.ghana-spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  animation: ghana-spin 1s linear infinite;
+}
+
+.ghana-spinner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border-top: 3px solid var(--ghana-red);
+  border-right: 3px solid var(--ghana-yellow);
+  border-bottom: 3px solid var(--ghana-green);
+  border-left: 3px solid transparent;
+}
+
+@keyframes ghana-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Utility Classes */
+.bg-ghana-red { background-color: var(--ghana-red) !important; }
+.bg-ghana-yellow { background-color: var(--ghana-yellow) !important; }
+.bg-ghana-green { background-color: var(--ghana-green) !important; }
+
+.text-ghana-red { color: var(--ghana-red) !important; }
+.text-ghana-yellow { color: var(--ghana-yellow) !important; }
+.text-ghana-green { color: var(--ghana-green) !important; }
+
+/* Border utility classes */
+.border-ghana-red { border-color: var(--ghana-red) !important; }
+.border-ghana-yellow { border-color: var(--ghana-yellow) !important; }
+.border-ghana-green { border-color: var(--ghana-green) !important; }
+
+/* Responsive utilities */
+@media (max-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+}
+
+/* Accessibility focus styles */
+:focus {
+  outline: 2px solid var(--ghana-yellow);
+  outline-offset: 2px;
+}
+
+/* Ghana-themed scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ghana-light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ghana-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ghana-red);
+}

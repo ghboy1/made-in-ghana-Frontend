@@ -1,0 +1,320 @@
+.herbs-spices-page {
+    background: #020202;
+    border-radius: 10px;
+    border: 1px solid #f1e609;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+.herbs-spices-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+    color: #2c5f2d;
+    margin-bottom: 1rem;
+  }
+  
+  .page-intro {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+  
+  .search-bar {
+    margin: 2rem 0;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem;
+    border: 2px solid #5eef36;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: #8aaE7f;
+    box-shadow: 0 0 8px rgba(110, 137, 102, 0.477);
+  }
+  
+  .herbs-spices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .herb-spice-card {
+    background: rgba(244, 244, 244, 0.851);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .herb-spice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-image-container {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .herb-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .herb-spice-card:hover .herb-image {
+    transform: scale(1.05);
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+  }
+  
+  .card-content h3 {
+    color: #2c5f2d;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+  }
+  
+  .card-content p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+.herbs-spices-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section-description {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.herbs-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  color: #444;
+}
+
+.filter-group select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 14px;
+  min-width: 180px;
+}
+
+.herbs-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.herb-product-card {
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  background-color: white;
+}
+
+.herb-product-card:hover {
+  transform: translateY(-5px);
+}
+
+.herb-product-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.herb-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.herb-product-card:hover .herb-product-image img {
+  transform: scale(1.05);
+}
+
+.herb-product-info {
+  padding: 20px;
+}
+
+.herb-product-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.herb-product-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.star-icon {
+  color: #ffc107;
+}
+
+.herb-product-region {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.herb-product-description {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.herb-product-price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.herb-product-price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.herb-product-stock {
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.herb-product-stock.in-stock {
+  background-color: rgba(0, 128, 0, 0.1);
+  color: green;
+}
+
+.herb-product-stock.out-of-stock {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #e53935;
+}
+
+.add-to-cart-btn, .view-details-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-btn {
+  background-color: #006b3f; /* Ghana green */
+  color: white;
+  border: none;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  background-color: #00582f;
+}
+
+.add-to-cart-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.view-details-btn {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+  text-decoration: none;
+}
+
+.view-details-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .herbs-spices-page {
+      padding: 1rem;
+    }
+    
+    .page-header h1 {
+      font-size: 2rem;
+    }
+
+  .herbs-products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .herbs-filters {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

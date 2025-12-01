@@ -1,0 +1,78 @@
+/* Product Details Page Styling */
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.product-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ce1126; /* Ghana red color */
+  margin-bottom: 1rem;
+}
+
+.product-description {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.product-attributes {
+  margin-bottom: 2rem;
+}
+
+.attribute-item {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.attribute-label {
+  font-weight: bold;
+  width: 120px;
+  color: #555;
+}
+
+.loading, .error, .not-found {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+  }
+  
+  .product-image, .product-info {
+    width: 100%;
+  }
+}

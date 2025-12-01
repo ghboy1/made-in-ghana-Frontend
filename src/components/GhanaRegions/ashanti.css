@@ -1,0 +1,264 @@
+/* Main container with gradient background */
+.region-products-page {
+  background: linear-gradient(135deg, #006400, #FFD700, #000000); /* Green, Gold, Black */
+  padding: 40px 20px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Page title */
+.region-products-page h1 {
+  color: #FFD700; /* Gold */
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Region description */
+.region-description {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Category section */
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-section h2 {
+  color: #FFD700; /* Gold */
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Product grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Product card */
+.product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Product image */
+.product-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Discount badge */
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+/* Product details */
+.product-details {
+  padding: 15px;
+  text-align: left;
+}
+
+.product-details h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  color: #000;
+}
+
+.category {
+  color: #006400; /* Green */
+  font-size: 0.9rem;
+  margin: 0 0 10px;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 10px;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.product-description {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #8B4513;
+  margin: 0 0 5px;
+}
+
+.discount {
+  color: #FF0000; /* Red */
+  font-size: 0.9rem;
+  margin: 0 0 5px;
+}
+
+.rating {
+  color: #FFD700; /* Gold */
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+/* View product button */
+.view-product-btn {
+  background-color: #FFD700; /* Gold */
+  color: #000;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.view-product-btn:hover {
+  background-color: #006400; /* Green */
+  color: #fff;
+}
+
+/* Region page */
+.region-page {
+  padding: 20px;
+}
+
+/* Region header */
+.region-header {
+  margin-bottom: 30px;
+}
+
+.region-header h1 {
+  color: #8B4513;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 10px;
+}
+
+/* View toggle */
+.view-toggle .nav-link {
+  color: #5a5a5a;
+  font-weight: 500;
+}
+
+.view-toggle .nav-link.active {
+  background-color: #8B4513;
+  border-color: #8B4513;
+}
+
+/* Category title */
+.category-title {
+  margin-bottom: 20px;
+  color: #8B4513;
+  padding-left: 10px;
+  border-left: 4px solid #FFD700;
+}
+
+/* Region exploration tabs */
+.region-tabs .nav-link {
+  color: #5a5a5a;
+}
+
+.region-tabs .nav-link.active {
+  font-weight: 600;
+  color: #8B4513;
+  border-bottom: 2px solid #FFD700;
+}
+
+.tab-content {
+  padding: 20px 0;
+}
+
+.tab-content h3 {
+  color: #8B4513;
+  margin-bottom: 20px;
+}
+
+/* Timeline for history tab */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background: #FFD700;
+  left: 50px;
+  top: 0;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 100px;
+}
+
+.timeline-date {
+  position: absolute;
+  left: 0;
+  width: 80px;
+  text-align: right;
+  font-weight: bold;
+  color: #8B4513;
+}
+
+.timeline-content {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 3px solid #8B4513;
+}
+
+.timeline-content h4 {
+  margin-top: 0;
+  color: #8B4513;
+}
+
+/* Attraction card */
+.attraction-card {
+  transition: transform 0.2s;
+}
+
+.attraction-card:hover {
+  transform: translateY(-5px);
+}

@@ -1,0 +1,107 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  width: 100%;
+}
+
+.spinner {
+  margin-bottom: 20px;
+}
+
+.ghana-spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.ghana-spinner {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.ghana-spinner-flag {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: spin 2s infinite linear;
+  transform-origin: center center;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stripe {
+  position: absolute;
+  width: 100%;
+  height: 33.33%;
+  left: 0;
+}
+
+.red {
+  top: 0;
+  background-color: #ce1126;
+}
+
+.gold {
+  top: 33.33%;
+  background-color: #fcd116;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.green {
+  top: 66.66%;
+  background-color: #006b3f;
+}
+
+.star {
+  width: 30%;
+  height: 90%;
+  background-color: #000;
+  clip-path: polygon(
+    50% 0%, 
+    61% 35%, 
+    98% 35%, 
+    68% 57%, 
+    79% 91%, 
+    50% 70%, 
+    21% 91%, 
+    32% 57%, 
+    2% 35%, 
+    39% 35%
+  );
+}
+
+.loading-message {
+  color: #333;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .loading-message {
+    color: #b9b5b560;
+  }
+}
+
+.loading-container p {
+  color: #555;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  margin-top: 10px;
+}

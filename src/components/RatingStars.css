@@ -1,0 +1,35 @@
+.rating-stars {
+    display: inline-block;
+    font-size: 1.2rem; /* Adjust as needed */
+    line-height: 1;
+  }
+  
+  /* Full star styling */
+  .star.full {
+    color: #FFD700; /* Gold color */
+  }
+  
+  /* Empty star styling */
+  .star.empty {
+    color: #ccc; /* Gray for empty stars */
+  }
+  
+  /* Half star styling */
+  .star.half {
+    position: relative;
+    color: #FFD700;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  /* Create a half-star effect */
+  .star.half::after {
+    content: "\2606"; /* Unicode for empty star */
+    color: #ccc;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 50%;
+    overflow: hidden;
+  }
+  

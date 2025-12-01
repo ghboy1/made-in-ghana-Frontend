@@ -1,0 +1,51 @@
+{
+  "exercises": [
+    {
+      "title": "Introduction to Scratch",
+      "description": "Learn the basics of Scratch programming by creating a simple animation.",
+      "steps": [
+        "Open Scratch and create a new project.",
+        "Choose a sprite from the library.",
+        "Add a backdrop to your stage.",
+        "Use the 'when green flag clicked' block to start your animation.",
+        "Add movement blocks to make your sprite move across the stage."
+      ],
+      "exampleCode": "when green flag clicked\nmove 10 steps\nwait 1 second\nturn 15 degrees"
+    },
+    {
+      "title": "Creating a Simple Game",
+      "description": "Build a basic game where the player controls a sprite to collect items.",
+      "steps": [
+        "Create a new Scratch project.",
+        "Add a sprite for the player and another for the collectible item.",
+        "Use the 'when [arrow key] pressed' block to move the player sprite.",
+        "Add a condition to check if the player sprite touches the collectible item.",
+        "Increase the score when the player collects the item."
+      ],
+      "exampleCode": "when [up arrow] key pressed\nchange y by 10\nif <touching [Collectible]> then\nchange [score] by 1"
+    },
+    {
+      "title": "Making a Story",
+      "description": "Create an interactive story using Scratch.",
+      "steps": [
+        "Start a new project in Scratch.",
+        "Choose characters and backgrounds for your story.",
+        "Use the 'say' block to make characters speak.",
+        "Add 'wait' blocks to control the timing of dialogue.",
+        "Use 'broadcast' blocks to switch between scenes."
+      ],
+      "exampleCode": "say [Hello!]\nwait 2 seconds\nbroadcast [Next Scene]"
+    },
+    {
+      "title": "Animating a Character",
+      "description": "Animate a character to make it look like it's walking.",
+      "steps": [
+        "Select a sprite that represents a character.",
+        "Create multiple costumes for the walking animation.",
+        "Use the 'next costume' block in a loop to animate the character.",
+        "Add sound effects to enhance the animation."
+      ],
+      "exampleCode": "forever\nnext costume\nwait 0.1 seconds"
+    }
+  ]
+}

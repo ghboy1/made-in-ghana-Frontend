@@ -1,0 +1,146 @@
+/* Add to: c:\Users\Admin\Desktop\APPLICATIONS FOLDE\made-in-ghana\made-in-ghana-Frontend\src\components\GhanaRegions\regions.css */
+
+/* Eastern Region specific styling */
+.eastern-region {
+  background-color: #f9f9f9;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                    url('https://via.placeholder.com/1500x500?text=Eastern+Region+Background');
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.eastern-region .region-header h1 {
+  color: #2e7d32;
+  border-bottom: 2px solid #8bc34a;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.eastern-region .region-subtitle {
+  color: #558b2f;
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.eastern-region .view-toggle .nav-link.active {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.eastern-region .category-title {
+  color: #2e7d32;
+  border-left: 4px solid #8bc34a;
+}
+
+.eastern-region .timeline:before {
+  background: #8bc34a;
+}
+
+.eastern-region .timeline-content {
+  border-left: 3px solid #2e7d32;
+}
+
+.eastern-region .timeline-date {
+  color: #2e7d32;
+}
+
+.eastern-region .timeline-content h4 {
+  color: #2e7d32;
+}
+
+.eastern-region .price {
+  color: #2e7d32;
+}
+
+.region-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  background-color: #f1f8e9;
+  padding: 10px 15px;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-icon {
+  color: #2e7d32;
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+.landscape-image {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.landscape-image:hover {
+  transform: scale(1.02);
+}
+
+.culture-card {
+  transition: transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.culture-card:hover {
+  transform: translateY(-5px);
+}
+
+.culture-card .card-header {
+  background: linear-gradient(to right, #2e7d32, #689f38);
+  font-weight: 600;
+}
+
+.attraction-card {
+  overflow: hidden;
+}
+
+.attraction-card img {
+  transition: transform 0.5s;
+}
+
+.attraction-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Make product cards match the Eastern theme */
+.eastern-region .product-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.eastern-region .product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.eastern-region .product-card .btn-primary {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.eastern-region .product-card .btn-primary:hover {
+  background-color: #1b5e20;
+  border-color: #1b5e20;
+}
+
+.eastern-region .product-card .btn-outline-secondary:hover {
+  background-color: #f1f8e9;
+  color: #2e7d32;
+}
+
+.eastern-region .rating {
+  color: #ff8f00;
+}

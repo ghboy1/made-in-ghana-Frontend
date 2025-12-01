@@ -1,0 +1,88 @@
+{
+  "exercises": [
+    {
+      "id": 1,
+      "title": "Ghana Flag Animation",
+      "description": "Create an animated version of the Ghana flag",
+      "difficulty": "Beginner",
+      "steps": [
+        "Create a new project in Scratch",
+        "Draw a red, gold, and green rectangle sprite",
+        "Add a black star to the center using the shape tools",
+        "Program the flag to wave using the 'glide' and 'change size' blocks",
+        "Add Ghana's national anthem as background music"
+      ],
+      "link": "https://scratch.mit.edu/projects/editor/"
+    },
+    {
+      "id": 2,
+      "title": "Ghanaian Market Game",
+      "description": "Build a simple game about shopping in a local market",
+      "difficulty": "Intermediate",
+      "steps": [
+        "Create a market background with multiple stalls",
+        "Add sprite characters for the seller and buyer",
+        "Create fruit and vegetable sprites with prices",
+        "Program the buyer to collect items and calculate total cost",
+        "Add Ghanaian currency (cedi) as the payment system"
+      ],
+      "link": "https://scratch.mit.edu/projects/editor/"
+    },
+    {
+      "id": 3,
+      "title": "Adinkra Symbols Matching",
+      "description": "Create a memory game with traditional Adinkra symbols",
+      "difficulty": "Intermediate",
+      "steps": [
+        "Create sprites for different Adinkra symbols",
+        "Program a grid layout for the memory game",
+        "Add flip animation when a card is clicked",
+        "Implement matching logic to check if two flipped cards match",
+        "Include information about what each Adinkra symbol means"
+      ],
+      "link": "https://scratch.mit.edu/projects/editor/"
+    },
+    {
+      "id": 4,
+      "title": "Ghanaian Music Maker",
+      "description": "Create an interactive drum and music program with traditional Ghanaian instruments",
+      "difficulty": "Advanced",
+      "steps": [
+        "Add sprites for drums (like the talking drum), xylophones, and other instruments",
+        "Record or import sound samples for each instrument",
+        "Program each instrument to play when clicked",
+        "Create a rhythm sequencer that can play patterns",
+        "Add a background showing traditional Ghanaian musicians"
+      ],
+      "link": "https://scratch.mit.edu/projects/editor/"
+    },
+    {
+      "id": 5,
+      "title": "Ghana Quiz Game",
+      "description": "Build an educational quiz about Ghanaian history, culture, and geography",
+      "difficulty": "Beginner",
+      "steps": [
+        "Create a question bank with multiple-choice questions about Ghana",
+        "Design a user interface with question text and answer buttons",
+        "Program scoring logic to track correct answers",
+        "Add feedback for correct and incorrect answers",
+        "Include interesting facts about Ghana for each question"
+      ],
+      "link": "https://scratch.mit.edu/projects/editor/"
+    },
+    {
+      "id": 6,
+      "title": "Ghanaian Foods Adventure",
+      "description": "Create a game where players learn to cook traditional Ghanaian dishes",
+      "difficulty": "Advanced",
+      "steps": [
+        "Design a kitchen background with cooking utensils",
+        "Create sprites for various ingredients (yam, plantain, tomatoes, etc.)",
+        "Program a step-by-step cooking process for dishes like jollof rice or fufu",
+        "Add interactive elements where players select and combine ingredients",
+        "Include cultural information about each dish and its significance"
+      ],
+      "link": "https://scratch.mit.edu/projects/editor/"
+    }
+  ]
+}

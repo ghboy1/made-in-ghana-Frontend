@@ -1,0 +1,445 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Main Container */
+.boys-fashion-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Ghana Flag Banner */
+.ghana-flag-banner {
+  display: flex;
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+.flag-stripe {
+  flex: 1;
+}
+
+.red { background-color: #ce1126; }
+.gold { background-color: #fcd116; }
+.green { background-color: #006b3f; }
+
+/* Language Selector */
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.language-icon {
+  font-size: 1.5rem;
+}
+
+select {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.category-symbol {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.page-description {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.search-container {
+  display: flex;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-button {
+  padding: 10px;
+  background-color: #006b3f;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+/* Adinkra Tooltip */
+.adinkra-tooltip {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.adinkra-symbol-large {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.adinkra-meaning {
+  font-size: 1rem;
+}
+
+/* Carousel Section */
+.carousel-section {
+  margin-bottom: 40px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.carousel-item img {
+  width: 50%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.carousel-content {
+  padding: 20px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background: #006b3f;
+}
+
+/* Categories Grid */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.category-info {
+  padding: 15px;
+}
+
+.category-regions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #006b3f;
+}
+
+/* Product Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-hover-buttons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.favorite-button, .share-button {
+  background: white;
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.product-info {
+  padding-top: 10px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  color: #006b3f;
+  font-weight: bold;
+}
+
+/* Filter Panel */
+.filter-panel {
+  background: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-options label {
+  display: block;
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-item {
+    flex-direction: column;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Add this accessibility-focused CSS to your existing styles */
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 10px 15px;
+  background: #232f3e;
+  color: white;
+  z-index: 9999;
+  font-weight: bold;
+}
+
+/* Better focus styles for interactive elements */
+a:focus,
+button:focus,
+input:focus,
+select:focus {
+  outline: 2px solid #f0c14b;
+  outline-offset: 2px;
+}
+
+/* Custom focus style for cards */
+.product-card:focus-within {
+  box-shadow: 0 0 0 3px #f0c14b, 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced visual feedback for buttons */
+.btn-primary, 
+.btn-secondary {
+  position: relative;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary:hover, 
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:active, 
+.btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Improved loading spinner */
+.ghana-flag-spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  animation: spinner-rotate 2s infinite linear;
+}
+
+.spinner-stripe {
+  position: absolute;
+  width: 100%;
+  height: 33.33%;
+}
+
+.spinner-stripe.red {
+  top: 0;
+  background-color: #ce1126;
+}
+
+.spinner-stripe.gold {
+  top: 33.33%;
+  background-color: #fcd116;
+}
+
+.spinner-stripe.green {
+  top: 66.66%;
+  background-color: #006b3f;
+}
+
+@keyframes spinner-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Improved visibility for filter options */
+.filter-panel label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.filter-panel input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+/* Better error state styling */
+.error-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.error-container h2 {
+  color: #ce1126;
+  margin-bottom: 16px;
+}
+
+.error-container button {
+  margin-top: 20px;
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

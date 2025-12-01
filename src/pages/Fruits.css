@@ -1,0 +1,98 @@
+.fruits-page {
+    padding: 20px;
+    background-color: #63a8f6de;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .fruits-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .fruits-header h1 {
+    font-size: 2.5rem;
+    color: #0a3d62;
+    margin-bottom: 1rem;
+  }
+  
+  .fruits-intro {
+    font-size: 1.1rem;
+    color: #096c03;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+  
+  /* Search bar styling */
+  .search-bar {
+    margin: 2rem 0;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem;
+    border: 2px solid #a6a1a1;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: #66f082;
+    box-shadow: 0 0 8px rgba(255, 3, 3, 0.882);
+  }
+  
+  /* Visually hidden class for accessibility */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  .fruits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .fruit-card {
+    background: #83d7f1;
+    border-radius: 10px;
+    border: 1px solid #f1e609;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .fruit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fruit-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .fruit-card h3 {
+    color: #161916;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .fruit-card p {
+    color: #010101;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  

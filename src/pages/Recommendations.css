@@ -1,0 +1,408 @@
+.recommendations-page {
+    padding: 2rem;
+    background: linear-gradient(to bottom right, #14a2e9c0, #0c6700);
+    min-height: 100vh;
+  }
+  
+  .recommendations-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .recommendations-header h1 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .recommendations-header p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 0.5rem;
+  }
+  
+  .search-bar {
+    max-width: 600px;
+    margin: 1rem auto;
+    position: relative;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    border: 3px solid #fa0202;
+    font-size: 1.1rem;
+  }
+  
+  .search-bar i {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+  }
+  
+  .recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .recommendation-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recommendation-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .recommendation-card:hover .card-image img {
+    transform: scale(1.1);
+  }
+  
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.7));
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem;
+  }
+  
+  .price-tag {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+  }
+  
+  .rating {
+    color: #FFD700;
+    font-weight: bold;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark-bg);
+  }
+  
+  .tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .tag {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--dark-bg);
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .save-btn, .explore-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .save-btn {
+    background: rgba(225, 159, 65, 0.1);
+    color: var(--primary-color);
+  }
+  
+  .explore-btn {
+    background: var(--secondary-color);
+    color: white;
+  }
+
+  .no-results {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 2rem;
+  }
+  
+  .cultural-mashup {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: var(--secondary-color);
+    border-radius: 20px;
+  }
+  
+  .cultural-mashup h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .mashup-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .mashup-item {
+    padding: 2rem;
+    border-radius: 15px;
+    color: white;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .mashup-item:hover {
+    transform: rotate(3deg) scale(1.05);
+  }
+  
+  .art-music {
+    background: linear-gradient(45deg, #AF1E2D, #E19F41);
+  }
+  
+  .fashion-tech {
+    background: linear-gradient(45deg, #2D572C, #1A1A1A);
+  }
+  
+  .food-culture {
+    background: linear-gradient(45deg, #E19F41, #AF1E2D);
+  }
+  
+  @media (max-width: 768px) {
+    .content-grid {
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    
+    .recommendations-header h1 {
+      font-size: 2rem;
+    }
+  }
+
+  /* Add to Recommendations.css */
+
+/* Loading Spinner */
+.loading-spinner {
+    text-align: center;
+    padding: 4rem;
+    color: var(--secondary-color);
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--primary-color);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Section Header Improvements */
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .items-count {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+  }
+  
+  /* Tags */
+  .tags {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .tag {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--dark-bg);
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  /* Movie Meta */
+  .movie-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .year {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+  }
+  
+  /* Saved State */
+  .save-btn.saved {
+    background: var(--accent-color);
+    color: white;
+  }
+  
+  /* Fusion Icons */
+  .fusion-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    opacity: 0.8;
+  }
+  
+  /* New Mashup Item */
+  .tech-heritage {
+    background: linear-gradient(45deg, #2D572C, #E19F41);
+  }
+  
+  /* Hover Effects */
+  .mashup-item:hover .fusion-icons {
+    animation: pulse 1s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  
+  /* Accessibility Focus States */
+  button:focus, input:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+  }
+  
+  /* Responsive Improvements */
+  @media (max-width: 480px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .mashup-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .recommendations-header h1 {
+      font-size: 1.8rem;
+    }
+  }
+
+  /* Recommendations Section */
+.recommendations-section {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1200px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recommendations-section h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.recommendation-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.recommendation-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.recommendation-title {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.recommendation-price {
+  font-size: 14px;
+  color: #666;
+}
+
+.see-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.see-more-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ce1126;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.see-more-button:hover {
+  background: #a50d1d;
+}

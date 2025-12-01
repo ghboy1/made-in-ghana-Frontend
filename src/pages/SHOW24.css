@@ -1,0 +1,398 @@
+.show24-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section */
+.show24-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  background-color: #006B3F; /* Green from Ghana flag as a fallback */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.show24-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  z-index: 1;
+}
+
+.show24-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.show24-hero h1 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+  color: #FFD700; /* Gold color for Ghanaian theme */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.show24-hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.show24-hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.show24-cta {
+  background-color: #CE1126; /* Red from Ghana flag */
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.show24-cta:hover {
+  background-color: #FFC72C; /* Gold/yellow from Ghana flag */
+  color: #006B3F; /* Green from Ghana flag */
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Intro Section */
+.show24-intro {
+  padding: 80px 20px;
+  background-color: white;
+}
+
+.show24-intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.show24-intro h2 {
+  font-size: 2.5rem;
+  color: #006B3F; /* Green from Ghana flag */
+  margin-bottom: 30px;
+}
+
+.show24-intro p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Value Chains Section */
+.show24-value-chains {
+  padding: 80px 20px;
+  background-color: #f5f5f5;
+}
+
+.show24-value-chains h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #006B3F; /* Green from Ghana flag */
+  margin-bottom: 50px;
+}
+
+.value-chains-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.value-chain-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-chain-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.chain-image {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-chain-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.value-chain-card:hover .value-chain-img {
+  transform: scale(1.05);
+}
+
+.chain-content {
+  padding: 25px;
+}
+
+.chain-content h3 {
+  font-size: 1.5rem;
+  color: #006B3F;
+  margin-bottom: 15px;
+}
+
+.chain-content p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.chain-link {
+  display: inline-block;
+  color: #CE1126;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 0;
+  position: relative;
+}
+
+.chain-link:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #CE1126;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.chain-link:hover:after {
+  transform: scaleX(1);
+}
+
+/* Strategy Section */
+.show24-strategy {
+  padding: 80px 20px;
+  background-color: #006B3F; /* Green from Ghana flag */
+  color: white;
+}
+
+.show24-strategy h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.strategy-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.strategy-card:hover {
+  transform: translateY(-7px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.strategy-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.strategy-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #FFD700; /* Gold color */
+}
+
+.strategy-card p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Vision Section */
+.show24-vision {
+  position: relative;
+  padding: 100px 20px;
+  background-color: #333; /* Dark background as fallback */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+.vision-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+
+.vision-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.vision-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #FFD700; /* Gold color */
+}
+
+.vision-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.vision-cta {
+  background-color: #FFD700; /* Gold color */
+  color: #006B3F; /* Green color */
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.vision-cta:hover {
+  background-color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Featured Products Section */
+.show24-featured-products {
+  padding: 80px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.show24-featured-products h2 {
+  font-size: 2.5rem;
+  color: #006B3F;
+  margin-bottom: 15px;
+}
+
+.show24-featured-products p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.featured-products-slider {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-placeholder {
+  width: 100%;
+  padding: 40px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.view-all-link {
+  display: inline-block;
+  background-color: #006B3F;
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.view-all-link:hover {
+  background-color: #CE1126;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .show24-hero h1 {
+    font-size: 3rem;
+  }
+  
+  .show24-hero h2 {
+    font-size: 1.8rem;
+  }
+  
+  .show24-intro h2,
+  .show24-value-chains h2,
+  .show24-strategy h2,
+  .vision-content h2,
+  .show24-featured-products h2 {
+    font-size: 2rem;
+  }
+  
+  .strategy-grid,
+  .value-chains-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .show24-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .show24-hero h2 {
+    font-size: 1.5rem;
+  }
+  
+  .show24-hero p {
+    font-size: 1rem;
+  }
+  
+  .show24-cta,
+  .vision-cta,
+  .view-all-link {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

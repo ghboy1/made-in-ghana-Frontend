@@ -1,0 +1,613 @@
+/* Oti Region specific styling with water/river theme */
+.oti-region {
+  background-color: #f8fcff;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)), 
+                    url('https://via.placeholder.com/1500x500?text=Oti+Region+Landscape');
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0.7;
+}
+
+/* Header Styling */
+.oti-region .region-header {
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  text-align: center;
+  border-bottom: 1px dashed rgba(30, 136, 229, 0.3);
+}
+
+.oti-region .back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s;
+}
+
+.oti-region .back-button:hover {
+  transform: translateX(-3px);
+}
+
+.oti-region .region-title {
+  color: #1565c0;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.oti-region .region-subtitle {
+  color: #42a5f5;
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.oti-region .region-icon {
+  color: #1976d2;
+}
+
+/* View toggle styling */
+.oti-region .view-toggle {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.oti-region .view-toggle .nav-link {
+  color: #1976d2;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.oti-region .view-toggle .nav-link:hover:not(.active) {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.oti-region .view-toggle .nav-link.active {
+  background-color: #1e88e5;
+  border-color: #1e88e5;
+  color: white;
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2);
+}
+
+/* Products section styling */
+.oti-region .products-section {
+  animation: fadeIn 0.5s ease;
+}
+
+.oti-region .category-title {
+  color: #1565c0;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  padding-left: 12px;
+  border-left: 4px solid #42a5f5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.oti-region .product-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.oti-region .product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(33, 150, 243, 0.15) !important;
+}
+
+.oti-region .product-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.oti-region .product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.oti-region .product-card:hover .product-image {
+  transform: scale(1.08);
+}
+
+.oti-region .discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 8px;
+  background-color: #f44336;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.oti-region .product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #1565c0;
+}
+
+.oti-region .product-description {
+  font-size: 0.85rem;
+  color: #546e7a;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.oti-region .price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1565c0;
+}
+
+.oti-region .original-price {
+  font-size: 0.9rem;
+}
+
+.oti-region .rating {
+  color: #ffc107;
+  font-weight: 600;
+}
+
+.oti-region .add-to-cart-btn {
+  background-color: #1e88e5;
+  border-color: #1e88e5;
+  transition: all 0.3s ease;
+}
+
+.oti-region .add-to-cart-btn:hover {
+  background-color: #1565c0;
+  border-color: #1565c0;
+  transform: translateY(-2px);
+}
+
+.oti-region .view-details-btn:hover {
+  color: #1976d2;
+  border-color: #1976d2;
+  background-color: rgba(33, 150, 243, 0.05);
+}
+
+/* List view for products */
+.oti-region .product-list-view .product-list-card {
+  flex-direction: row;
+}
+
+.oti-region .product-list-card .product-image-container {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.oti-region .product-list-card .product-image {
+  height: 100%;
+  width: 100%;
+}
+
+.oti-region .product-list-card .card-body {
+  flex: 1;
+}
+
+/* Region tabs styling */
+.oti-region .region-tabs {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.oti-region .region-tabs .nav-link {
+  color: #1976d2;
+  border: none;
+  padding: 12px 20px;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.oti-region .region-tabs .nav-link:hover:not(.active) {
+  background-color: rgba(33, 150, 243, 0.05);
+}
+
+.oti-region .region-tabs .nav-link.active {
+  color: #1565c0;
+  background: transparent;
+  border-bottom: 3px solid #2196f3;
+  font-weight: bold;
+}
+
+.oti-region .tab-content {
+  padding: 20px 0;
+  animation: fadeIn 0.5s ease;
+}
+
+.oti-region .overview-title {
+  color: #1565c0;
+  font-weight: 700;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #64b5f6;
+  display: inline-block;
+}
+
+/* Culture cards */
+.oti-region .culture-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+}
+
+.oti-region .culture-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.oti-region .culture-card-header {
+  background: linear-gradient(to right, #1565c0, #42a5f5);
+  color: white;
+  font-weight: 600;
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.oti-region .culture-card .card-body {
+  padding: 20px;
+}
+
+.oti-region .culture-card img {
+  transition: transform 0.5s;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.oti-region .culture-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Attraction cards */
+.oti-region .attraction-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.oti-region .attraction-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 25px rgba(33, 150, 243, 0.2);
+}
+
+.oti-region .attraction-img-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.oti-region .attraction-img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.oti-region .attraction-card:hover .attraction-img-container img {
+  transform: scale(1.1);
+}
+
+.oti-region .attraction-card .card-title {
+  color: #1565c0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.oti-region .attraction-meta {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #bbdefb;
+  font-size: 0.85rem;
+}
+
+/* Region highlights */
+.oti-region .region-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.oti-region .highlight-item {
+  display: flex;
+  align-items: center;
+  background-color: #e3f2fd;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.oti-region .highlight-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.oti-region .highlight-icon {
+  color: #1976d2;
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+/* Neighboring regions */
+.oti-region .neighboring-regions {
+  background-color: #e3f2fd;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 3px solid #42a5f5;
+}
+
+.oti-region .neighboring-regions h5 {
+  color: #1565c0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.oti-region .region-nav-btn {
+  transition: all 0.3s;
+  border-color: #90caf9;
+  color: #1976d2;
+}
+
+.oti-region .region-nav-btn:hover {
+  background-color: #2196f3;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Image frame for region overview */
+.oti-region .image-frame {
+  padding: 8px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.oti-region .landscape-image {
+  transform: scale(1);
+  transition: transform 1s ease;
+}
+
+.oti-region .image-frame:hover .landscape-image {
+  transform: scale(1.03);
+}
+
+/* Climate info */
+.oti-region .climate-info {
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 3px solid #42a5f5;
+}
+
+.oti-region .climate-info h5 {
+  color: #1565c0;
+  font-weight: 600;
+}
+
+/* Action button */
+.oti-region .action-button {
+  background-color: #1e88e5;
+  border-color: #1e88e5;
+  padding: 10px 20px;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+.oti-region .action-button:hover {
+  background-color: #1565c0;
+  border-color: #1565c0;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.2);
+}
+
+/* Toast notification styling */
+.oti-region .toast-header {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border-bottom: 1px solid #bbdefb;
+}
+
+.oti-region .product-price {
+  color: #1565c0;
+  font-weight: 600;
+}
+
+/* Crafts section */
+.oti-region .craft-spotlight {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.oti-region .craft-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.oti-region .craft-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s;
+}
+
+.oti-region .craft-image-container:hover .craft-image {
+  transform: scale(1.03);
+}
+
+.oti-region .craft-badge {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  background-color: #1e88e5;
+  color: white;
+  padding: 5px 15px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.oti-region .craft-title {
+  color: #1565c0;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.oti-region .craft-description {
+  color: #546e7a;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.oti-region .craft-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.oti-region .craft-item {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.oti-region .craft-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.oti-region .craft-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.oti-region .craft-content {
+  flex: 1;
+}
+
+.oti-region .craft-content h5 {
+  color: #1565c0;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.oti-region .craft-content p {
+  color: #546e7a;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .oti-region .region-header {
+    padding-top: 30px;
+  }
+  
+  .oti-region .region-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .oti-region {
+    padding: 20px 15px;
+  }
+  
+  .oti-region .product-list-card {
+    flex-direction: column;
+  }
+  
+  .oti-region .product-list-card .product-image-container {
+    width: 100%;
+  }
+  
+  .oti-region .region-highlights {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .oti-region .highlight-item {
+    width: 100%;
+  }
+  
+  .oti-region .craft-item {
+    flex-direction: column;
+  }
+  
+  .oti-region .craft-icon {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .oti-region .region-tabs .nav-link {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,140 @@
+/* Register.css */
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  padding: 2rem;
+}
+
+.register__container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.register__title {
+  color: #1a365d;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.register__form-group {
+  margin-bottom: 1.5rem;
+}
+
+.register__label {
+  display: block;
+  color: #4a5568;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.register__select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.register__select:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+/* Phone Input Overrides */
+.register__phone-container {
+  width: 100% !important;
+}
+
+.register__phone-input {
+  width: 100% !important;
+  padding: 0.75rem 0.75rem 0.75rem 48px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 6px !important;
+  font-size: 1rem !important;
+}
+
+.register__phone-button {
+  background: none !important;
+  border: none !important;
+  border-right: 1px solid #e2e8f0 !important;
+  border-radius: 6px 0 0 6px !important;
+}
+
+.register__input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.register__input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.register__button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.register__button:hover {
+  background-color: #3182ce;
+}
+
+.register__button:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+}
+
+.register__error {
+  color: #e53e3e;
+  background-color: #fff5f5;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #fed7d7;
+}
+
+.register__success {
+  text-align: center;
+  padding: 2rem;
+}
+
+.register__success-text {
+  color: #38a169;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .register {
+    padding: 1rem;
+  }
+  
+  .register__container {
+    padding: 1.5rem;
+  }
+}

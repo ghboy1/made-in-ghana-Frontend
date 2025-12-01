@@ -1,0 +1,583 @@
+/* Western North Region specific styling with forest/cocoa theme */
+
+.western-north-region {
+    background-color: #f8fff9;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), 
+                      url('https://via.placeholder.com/1500x500?text=Western+North+Forest');
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .fade-in {
+    opacity: 1;
+  }
+  
+  .fade-out {
+    opacity: 0.7;
+  }
+  
+  .western-north-region .region-header {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px dashed rgba(46, 125, 50, 0.3);
+  }
+  
+  .western-north-region .back-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.2s;
+  }
+  
+  .western-north-region .back-button:hover {
+    transform: translateX(-3px);
+  }
+  
+  .western-north-region .region-title {
+    color: #2e7d32;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .western-north-region .region-subtitle {
+    color: #388e3c;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .western-north-region .region-icon {
+    color: #33691e;
+  }
+  
+  /* View toggle styling */
+  .western-north-region .view-toggle {
+    width: fit-content;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 25px;
+  }
+  
+  .western-north-region .view-toggle .nav-link {
+    color: #2e7d32;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+  }
+  
+  .western-north-region .view-toggle .nav-link:hover:not(.active) {
+    background-color: rgba(46, 125, 50, 0.1);
+  }
+  
+  .western-north-region .view-toggle .nav-link.active {
+    background-color: #2e7d32;
+    border-color: #2e7d32;
+    color: white;
+    box-shadow: 0 4px 8px rgba(46, 125, 50, 0.2);
+  }
+  
+  /* Products section styling */
+  .western-north-region .products-section {
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .western-north-region .category-title {
+    color: #33691e;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 4px solid #558b2f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  .western-north-region .product-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+  }
+  
+  .western-north-region .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(46, 125, 50, 0.15) !important;
+  }
+  
+  .western-north-region .product-image-container {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+  }
+  
+  .western-north-region .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .western-north-region .product-card:hover .product-image {
+    transform: scale(1.08);
+  }
+  
+  .western-north-region .discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 8px;
+    background-color: #d32f2f;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .western-north-region .product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1b5e20;
+  }
+  
+  .western-north-region .product-description {
+    font-size: 0.85rem;
+    color: #33691e;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .western-north-region .price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2e7d32;
+  }
+  
+  .western-north-region .original-price {
+    font-size: 0.9rem;
+  }
+  
+  .western-north-region .rating {
+    color: #ffd600;
+    font-weight: 600;
+  }
+  
+  .western-north-region .add-to-cart-btn {
+    background-color: #2e7d32;
+    border-color: #2e7d32;
+    transition: all 0.3s ease;
+  }
+  
+  .western-north-region .add-to-cart-btn:hover {
+    background-color: #1b5e20;
+    border-color: #1b5e20;
+    transform: translateY(-2px);
+  }
+  
+  .western-north-region .view-details-btn:hover {
+    color: #2e7d32;
+    border-color: #2e7d32;
+    background-color: rgba(46, 125, 50, 0.05);
+  }
+  
+  /* List view for products */
+  .western-north-region .product-list-view .product-list-card {
+    flex-direction: row;
+  }
+  
+  .western-north-region .product-list-card .product-image-container {
+    width: 200px;
+    flex-shrink: 0;
+  }
+  
+  .western-north-region .product-list-card .product-image {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .western-north-region .product-list-card .card-body {
+    flex: 1;
+  }
+  
+  /* Region tabs styling */
+  .western-north-region .region-tabs {
+    border-bottom: 1px solid #c8e6c9;
+    margin-bottom: 20px;
+  }
+  
+  .western-north-region .region-tabs .nav-link {
+    color: #2e7d32;
+    border: none;
+    padding: 12px 20px;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s;
+  }
+  
+  .western-north-region .region-tabs .nav-link:hover:not(.active) {
+    background-color: rgba(46, 125, 50, 0.05);
+  }
+  
+  .western-north-region .region-tabs .nav-link.active {
+    color: #1b5e20;
+    background: transparent;
+    border-bottom: 3px solid #558b2f;
+    font-weight: bold;
+  }
+  
+  .western-north-region .tab-content {
+    padding: 20px 0;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .western-north-region .overview-title {
+    color: #1b5e20;
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #7cb342;
+    display: inline-block;
+  }
+  
+  /* Timeline styles */
+  .western-north-region .timeline {
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  .western-north-region .timeline:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background: #7cb342;
+    left: 50px;
+    top: 0;
+  }
+  
+  .western-north-region .timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 100px;
+  }
+  
+  .western-north-region .timeline-date {
+    position: absolute;
+    left: 0;
+    width: 80px;
+    text-align: right;
+    font-weight: bold;
+    color: #33691e;
+  }
+  
+  .western-north-region .timeline-content {
+    background: #e8f5e9;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 3px solid #33691e;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .western-north-region .timeline-content h4 {
+    margin-top: 0;
+    color: #2e7d32;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  /* Culture cards */
+  .western-north-region .culture-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+  }
+  
+  .western-north-region .culture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .western-north-region .culture-card-header {
+    background: linear-gradient(to right, #33691e, #558b2f);
+    color: white;
+    font-weight: 600;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .western-north-region .culture-card .card-body {
+    padding: 20px;
+  }
+  
+  .western-north-region .culture-card img {
+    transition: transform 0.5s;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .western-north-region .culture-card:hover img {
+    transform: scale(1.03);
+  }
+  
+  /* Attraction cards */
+  .western-north-region .attraction-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+  }
+  
+  .western-north-region .attraction-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 25px rgba(46, 125, 50, 0.2);
+  }
+  
+  .western-north-region .attraction-img-container {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .western-north-region .attraction-img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .western-north-region .attraction-card:hover .attraction-img-container img {
+    transform: scale(1.1);
+  }
+  
+  .western-north-region .attraction-card .card-title {
+    color: #33691e;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .western-north-region .attraction-meta {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #c8e6c9;
+    font-size: 0.85rem;
+  }
+  
+  /* Region highlights */
+  .western-north-region .region-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  .western-north-region .highlight-item {
+    display: flex;
+    align-items: center;
+    background-color: #e8f5e9;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .western-north-region .highlight-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .western-north-region .highlight-icon {
+    color: #558b2f;
+    margin-right: 8px;
+    font-size: 1.1rem;
+  }
+  
+  /* Neighboring regions */
+  .western-north-region .neighboring-regions {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 3px solid #7cb342;
+  }
+  
+  .western-north-region .neighboring-regions h5 {
+    color: #33691e;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .western-north-region .region-nav-btn {
+    transition: all 0.3s;
+    border-color: #aed581;
+    color: #33691e;
+  }
+  
+  .western-north-region .region-nav-btn:hover {
+    background-color: #33691e;
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  /* Image frame for region overview */
+  .western-north-region .image-frame {
+    padding: 8px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #c8e6c9;
+  }
+  
+  .western-north-region .landscape-image {
+    transform: scale(1);
+    transition: transform 1s ease;
+  }
+  
+  .western-north-region .image-frame:hover .landscape-image {
+    transform: scale(1.03);
+  }
+  
+  /* Climate info */
+  .western-north-region .climate-info {
+    background-color: #f1f8e9;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 3px solid #558b2f;
+  }
+  
+  .western-north-region .climate-info h5 {
+    color: #33691e;
+    font-weight: 600;
+  }
+  
+  /* Action button */
+  .western-north-region .action-button {
+    background-color: #2e7d32;
+    border-color: #2e7d32;
+    padding: 10px 20px;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.3s;
+  }
+  
+  .western-north-region .action-button:hover {
+    background-color: #1b5e20;
+    border-color: #1b5e20;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.2);
+  }
+  
+  /* Toast notification styling */
+  .western-north-region .toast-header {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-bottom: 1px solid #c8e6c9;
+  }
+  
+  .western-north-region .product-price {
+    color: #2e7d32;
+    font-weight: 600;
+  }
+  
+  /* Forest-inspired decorative elements */
+  .western-north-region:before {
+    content: "";
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-image: url('https://via.placeholder.com/100?text=Leaf');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+    z-index: -1;
+  }
+  
+  .western-north-region:after {
+    content: "";
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 120px;
+    height: 120px;
+    background-image: url('https://via.placeholder.com/120?text=Cocoa');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.05;
+    z-index: -1;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .western-north-region .region-header {
+      padding-top: 30px;
+    }
+    
+    .western-north-region .region-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .western-north-region {
+      padding: 20px 15px;
+    }
+    
+    .western-north-region .product-list-card {
+      flex-direction: column;
+    }
+    
+    .western-north-region .product-list-card .product-image-container {
+      width: 100%;
+    }
+    
+    .western-north-region .timeline-item {
+      padding-left: 70px;
+    }
+    
+    .western-north-region .timeline-date {
+      width: 60px;
+      font-size: 0.9rem;
+    }
+    
+    .western-north-region .region-highlights {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .western-north-region .highlight-item {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .western-north-region .region-tabs .nav-link {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    }
+  }

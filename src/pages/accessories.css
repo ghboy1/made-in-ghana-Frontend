@@ -1,0 +1,35 @@
+.accessories-page {
+    padding: 20px;
+  }
+  
+  .accessories-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .item-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .item-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .item-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .item-card p {
+    font-size: 1em;
+    color: #333;
+  }

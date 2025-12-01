@@ -1,0 +1,132 @@
+
+  
+  .account-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+    background: #f5f5f5;
+  }
+  
+  .account-sidebar {
+    background: white;
+    padding: 2rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.129);
+  }
+  
+  .sidebar-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-btn:hover {
+    background: #f8f9fa;
+  }
+  
+  .sidebar-btn.active {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+    border-radius: 8px;
+  }
+  
+  .account-main {
+    padding: 2rem;
+  }
+  
+  .section-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .account-card {
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+  }
+  
+  .action-btn {
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  .address-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .address-card {
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .default-badge {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+  }
+  
+  .add-address-card {
+    border: 2px dashed #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .add-address-card:hover {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
+  
+  @media (max-width: 768px) {
+    .account-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .account-sidebar {
+      display: none; /* Replace with mobile menu */
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .account-container {
+      background: var(--dark-bg);
+      color: white;
+    }
+  
+    .account-sidebar,
+    .section-content {
+      background: #197003;
+    }
+  
+    .sidebar-btn:hover {
+      background: #333;
+    }
+  }

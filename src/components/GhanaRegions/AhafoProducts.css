@@ -1,0 +1,352 @@
+/* Ahafo Region specific styling with forest/nature theme */
+.ahafo-region {
+  padding: 25px;
+  background-color: #f5f9f0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), 
+                    url('https://via.placeholder.com/1500x500?text=Ahafo+Forest+Background');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.ahafo-region .region-header {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.ahafo-region .back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ahafo-region .region-title {
+  color: #2e7d32;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 2.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ahafo-region .region-subtitle {
+  color: #558b2f;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.ahafo-region .region-icon {
+  color: #388e3c;
+}
+
+.ahafo-region .view-toggle {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.ahafo-region .view-toggle .nav-link {
+  color: #495057;
+  font-weight: 500;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.ahafo-region .view-toggle .nav-link.active {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+  color: white;
+}
+
+.ahafo-region .category-title {
+  margin-bottom: 20px;
+  color: #33691e;
+  padding-left: 10px;
+  border-left: 4px solid #7cb342;
+  font-size: 1.5rem;
+}
+
+.ahafo-region .product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.ahafo-region .product-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 25px rgba(46, 125, 50, 0.15) !important;
+}
+
+.ahafo-region .product-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.ahafo-region .product-image {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.ahafo-region .product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.ahafo-region .discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 8px;
+  background-color: #d32f2f;
+}
+
+.ahafo-region .product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #33691e;
+}
+
+.ahafo-region .product-description {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.ahafo-region .price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.ahafo-region .original-price {
+  font-size: 0.9rem;
+}
+
+.ahafo-region .rating {
+  color: #ffa000;
+  font-weight: 600;
+}
+
+/* List view for products */
+.ahafo-region .product-list-view .product-list-card {
+  flex-direction: row;
+}
+
+.ahafo-region .product-list-card .product-image-container {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.ahafo-region .product-list-card .product-image {
+  height: 100%;
+  width: 200px;
+}
+
+.ahafo-region .product-list-card .card-body {
+  flex: 1;
+}
+
+/* Region tabs styling */
+.ahafo-region .region-tabs {
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 20px;
+}
+
+.ahafo-region .region-tabs .nav-link {
+  color: #495057;
+  border: none;
+  padding: 10px 15px;
+  font-weight: 500;
+}
+
+.ahafo-region .region-tabs .nav-link.active {
+  color: #2e7d32;
+  background: transparent;
+  border-bottom: 3px solid #7cb342;
+}
+
+.ahafo-region .tab-content {
+  padding: 20px 0;
+}
+
+/* Timeline styles */
+.ahafo-region .timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.ahafo-region .timeline:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  background: #7cb342;
+  left: 50px;
+  top: 0;
+}
+
+.ahafo-region .timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 100px;
+}
+
+.ahafo-region .timeline-date {
+  position: absolute;
+  left: 0;
+  width: 80px;
+  text-align: right;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.ahafo-region .timeline-content {
+  background: #f5f9f0;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 3px solid #2e7d32;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ahafo-region .timeline-content h4 {
+  margin-top: 0;
+  color: #33691e;
+  font-size: 1.2rem;
+}
+
+/* Culture cards */
+.ahafo-region .culture-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ahafo-region .culture-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ahafo-region .culture-card .card-header {
+  background: linear-gradient(to right, #2e7d32, #7cb342);
+  color: white;
+  font-weight: 600;
+  padding: 12px 15px;
+}
+
+/* Attraction cards */
+.ahafo-region .attraction-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ahafo-region .attraction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ahafo-region .attraction-card img {
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.ahafo-region .attraction-card:hover img {
+  transform: scale(1.1);
+}
+
+.ahafo-region .attraction-card .card-title {
+  color: #33691e;
+  font-weight: 600;
+}
+
+/* Button styling */
+.ahafo-region .btn-primary {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.ahafo-region .btn-primary:hover {
+  background-color: #1b5e20;
+  border-color: #1b5e20;
+}
+
+.ahafo-region .btn-outline-primary {
+  color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.ahafo-region .btn-outline-primary:hover {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+  color: white;
+}
+
+.ahafo-region .btn-outline-secondary:hover {
+  background-color: #f1f8e9;
+  color: #2e7d32;
+}
+
+/* Region highlights */
+.ahafo-region .region-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.ahafo-region .highlight-item {
+  display: flex;
+  align-items: center;
+  background-color: #f1f8e9;
+  padding: 10px 15px;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.ahafo-region .highlight-icon {
+  color: #2e7d32;
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ahafo-region .product-list-card {
+    flex-direction: column;
+  }
+  
+  .ahafo-region .product-list-card .product-image-container {
+    width: 100%;
+  }
+  
+  .ahafo-region .product-list-card .product-image {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .ahafo-region .region-highlights {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .ahafo-region .timeline-item {
+    padding-left: 70px;
+  }
+  
+  .ahafo-region .timeline-date {
+    width: 60px;
+  }
+}

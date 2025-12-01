@@ -1,0 +1,151 @@
+/* src/pages/ManufacturerProducts.css */
+.manufacturer-page {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .manufacturer-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+  }
+  
+  .verified-badge {
+    background: #f1c40f;
+    color: #2c3e50;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 1rem 0;
+  }
+  
+  .manufacturer-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .image-container {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 3px solid #2ecc71;
+  }
+  
+  .discount-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #e74c3c;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  
+  .product-details {
+    padding: 1.5rem;
+  }
+  
+  .price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  
+  .current-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+  
+  .sold-count {
+    background: #ecf0f1;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+  }
+  
+  .product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .category {
+    background: #3498db;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+  }
+  
+  .view-button {
+    background: #2ecc71;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .view-button:hover {
+    background: #27ae60;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 3rem;
+    color: #2c3e50;
+  }
+  
+  @media (max-width: 768px) {
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .manufacturer-header {
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .current-price {
+      font-size: 1.3rem;
+    }
+  }

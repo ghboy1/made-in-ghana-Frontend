@@ -1,0 +1,198 @@
+/* Floating stars container */
+.floating-stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floating-star {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  animation: float 4s ease-in forwards;
+}
+
+.floating-star:before {
+  content: "★";
+  position: absolute;
+  font-size: 20px;
+}
+
+.floating-star.color-red:before {
+  color: var(--accent-red);
+}
+
+.floating-star.color-gold:before {
+  color: var(--secondary-dark);
+}
+
+.floating-star.color-green:before {
+  color: var(--primary-dark);
+}
+
+.floating-star.color-black:before {
+  color: var(--accent-black);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Floating Ghana flags */
+.floating-flag {
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  opacity: 0;
+  animation: flagFloat 6s ease-in forwards;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect width="600" height="400" fill="%23ce1126"/><rect width="600" height="267" fill="%23fcd116"/><rect width="600" height="134" fill="%23006b3f"/><polygon points="300,200 340,305 240,235 360,235 260,305" fill="%23000000"/></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+@keyframes flagFloat {
+  0% {
+    transform: translateY(20px) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-75px) translateX(10px) rotate(8deg);
+  }
+  100% {
+    transform: translateY(-150px) translateX(20px) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+/* Floating hearts */
+.floating-heart {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  animation: heartFloat 4.5s ease-in forwards;
+  z-index: 1;
+}
+
+.floating-heart:before {
+  content: "❤";
+  position: absolute;
+  font-size: 24px;
+}
+
+.floating-heart.heart-red:before {
+  color: #e91e63;
+}
+
+.floating-heart.heart-pink:before {
+  color: #ff4081;
+}
+
+.floating-heart.heart-purple:before {
+  color: #9c27b0;
+}
+
+@keyframes heartFloat {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(-10px) scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-120px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Floating likes */
+.floating-like {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  opacity: 0;
+  animation: likeFloat 5s ease-in forwards;
+  z-index: 1;
+}
+
+.floating-like:before {
+  content: "👍";
+  position: absolute;
+  font-size: 28px;
+}
+
+@keyframes likeFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(-130px) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+/* Floating patterns */
+.floating-pattern {
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: patternFloat 7s ease-in-out forwards;
+  z-index: 1;
+}
+
+@keyframes patternFloat {
+  0% {
+    transform: translateY(20px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Floating containers */
+.floating-elements-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}

@@ -1,0 +1,95 @@
+.nutsseeds-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .nutsseeds-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .nutsseeds-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .nutsseeds-intro {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+  
+  /* Search bar styling */
+  .search-bar {
+    margin: 2rem 0;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: #8aae7f;
+    box-shadow: 0 0 8px rgba(138, 174, 127, 0.3);
+  }
+  
+  /* Visually hidden class for accessibility */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  .nutsseeds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .nutsseeds-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .nutsseeds-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nutsseeds-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .nutsseeds-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #222;
+  }
+  
+  .nutsseeds-card p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  

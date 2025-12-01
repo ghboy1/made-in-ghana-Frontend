@@ -1,0 +1,257 @@
+/* Main dashboard styles */
+.manufacturer-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 15px;
+}
+
+.dashboard-header h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #006b3f; /* Ghana green */
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #00583a;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn-secondary:hover {
+  background-color: #f5f5f5;
+}
+
+/* Dashboard overview cards */
+.dashboard-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.overview-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.overview-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+}
+
+.overview-card.sales::before {
+  background-color: #ce1126; /* Ghana red */
+}
+
+.overview-card.orders::before {
+  background-color: #fcd116; /* Ghana gold */
+}
+
+.overview-card.avg-order::before {
+  background-color: #006b3f; /* Ghana green */
+}
+
+.overview-card.products::before {
+  background-color: #000; /* Black */
+}
+
+.overview-card h3 {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.overview-card .amount {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 10px 0 0;
+  color: #333;
+}
+
+/* Dashboard sections */
+.dashboard-analytics,
+.dashboard-product-performance,
+.dashboard-recent-orders,
+.add-product-section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.dashboard-analytics h2,
+.dashboard-product-performance h2,
+.dashboard-recent-orders h2,
+.add-product-section h2 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.dashboard-analytics h2::after,
+.dashboard-product-performance h2::after,
+.dashboard-recent-orders h2::after,
+.add-product-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(to right, #ce1126, #fcd116, #006b3f);
+}
+
+/* Form styles */
+.product-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #006b3f;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 107, 63, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Loading spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.ghana-flag-spinner {
+  width: 60px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  animation: spin 1.5s infinite alternate;
+}
+
+.spinner-stripe {
+  flex: 1;
+}
+
+.spinner-stripe.red {
+  background-color: #ce1126;
+}
+
+.spinner-stripe.gold {
+  background-color: #fcd116;
+}
+
+.spinner-stripe.green {
+  background-color: #006b3f;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.loading-container p {
+  margin-top: 20px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .dashboard-actions {
+    margin-top: 15px;
+    width: 100%;
+  }
+  
+  .btn-primary, .btn-secondary {
+    flex: 1;
+  }
+}

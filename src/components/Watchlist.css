@@ -1,0 +1,388 @@
+:watchlist{
+  --primary: #2d3436;
+  --accent: #e74c3c;
+  --text: #2d3436;
+  --bg: #f5f6fa;
+  --card-bg: #ffffff;
+  --star: #f1c40f;
+  --success: #27ae60;
+  --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.watchlist {
+  padding: 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.watchlist__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.watchlist__title {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.watchlist__controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.watchlist__search {
+  position: relative;
+  width: 400px;
+}
+
+.watchlist__search-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 2px solid #dfe6e9;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.watchlist__search-input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.watchlist__search-icon {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  fill: #636e72;
+}
+
+.watchlist__sort-select {
+  padding: 1rem;
+  border: 2px solid #dfe6e9;
+  border-radius: 50px;
+  background: white;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.watchlist__sort-select:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.watchlist__nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.watchlist__nav-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  background: #dfe6e9;
+  color: var(--text);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.watchlist__nav-btn.active,
+.watchlist__nav-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.watchlist__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.watchlist__card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: var(--transition);
+}
+
+.watchlist__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.watchlist__card-thumb {
+  position: relative;
+  aspect-ratio: 2/3;
+}
+
+.watchlist__card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.watchlist__card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.watchlist__fav {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.watchlist__fav svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+  stroke: white;
+  stroke-width: 2px;
+  transition: var(--transition);
+}
+
+.watchlist__fav.active svg {
+  fill: var(--accent);
+  stroke: var(--accent);
+}
+
+.watchlist__card-prices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: white;
+}
+
+.watchlist__card-rent {
+  background: var(--accent);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.watchlist__card-buy {
+  background: var(--success);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.watchlist__card-body {
+  padding: 1rem;
+}
+
+.watchlist__card-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.watchlist__card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #636e72;
+  margin-bottom: 1rem;
+}
+
+.watchlist__card-rating {
+  color: var(--star);
+}
+
+.watchlist__card-detail {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.watchlist__card-detail:hover {
+  opacity: 0.9;
+}
+
+/* Modal Styles */
+.watchlist__modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.watchlist__modal-content {
+  background: white;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.watchlist__modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.watchlist__modal-player {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.watchlist__modal-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.watchlist__modal-info {
+  padding: 2rem;
+}
+
+.watchlist__modal-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.watchlist__modal-descr {
+  color: #636e72;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.watchlist__modal-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.watchlist__modal-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.watchlist__modal-stat svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--accent);
+}
+
+.watchlist__modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.watchlist__modal-action {
+  padding: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.watchlist__modal-rent {
+  background: #f8f9fa;
+  color: var(--text);
+}
+
+.watchlist__modal-buy {
+  background: var(--accent);
+  color: white;
+}
+
+.watchlist__modal-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.watchlist__modal-actiontext {
+  font-size: 0.9rem;
+}
+
+/* Loading States */
+.watchlist__loading {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.watchlist__skeleton {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.watchlist__skeleton-thumb {
+  aspect-ratio: 2/3;
+  background: #dfe6e9;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+.watchlist__skeleton-line {
+  height: 16px;
+  background: #dfe6e9;
+  margin: 1rem;
+  border-radius: 4px;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% { opacity: 0.6 }
+  50% { opacity: 1 }
+  100% { opacity: 0.6 }
+}
+
+@media (max-width: 768px) {
+  .watchlist__controls {
+    flex-direction: column;
+  }
+  
+  .watchlist__search {
+    width: 100%;
+  }
+  
+  .watchlist__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .watchlist__modal-content {
+    max-width: 95%;
+  }
+}

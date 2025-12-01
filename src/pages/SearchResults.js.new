@@ -1,0 +1,429 @@
+import React, { useState, useEffect, useContext } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { FaFilter, FaStar, FaHeart, FaShoppingCart, FaChevronRight } from 'react-icons/fa';
+import { useCart } from '../contexts/CartContext';
+import { SearchContext } from '../contexts/SearchContext';
+import productService from '../services/productService';
+import { useAuth } from '../contexts/AuthContext';
+import './SearchResults.css';
+
+const SearchResults = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { addItem } = useCart();
+  const { currentUser } = useAuth();
+  const { setSearchTerm, setSelectedCategory } = useContext(SearchContext);
+  
+  // State for search results
+  const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [noResults, setNoResults] = useState(false);
+  const [favorites, setFavorites] = useState([]);
+  const [error, setError] = useState(null);
+  
+  // Pagination state
+  const [pagination, setPagination] = useState({
+    page: 1,
+    limit: 12,
+    total: 0,
+    totalPages: 0
+  });
+  
+  // State for filters
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [filters, setFilters] = useState({
+    priceRange: 'all',
+    category: 'all',
+    region: 'all',
+    rating: 'all',
+    sortBy: 'relevance'
+  });
+  
+  // Parse search parameters from URL
+  const searchParams = new URLSearchParams(location.search);
+  const queryTerm = searchParams.get('term') || '';
+  const queryCategory = searchParams.get('category') || '';
+  const currentPage = parseInt(searchParams.get('page')) || 1;
+  
+  // Update search context with current search parameters
+  useEffect(() => {
+    setSearchTerm(queryTerm);
+    setSelectedCategory(queryCategory);
+  }, [queryTerm, queryCategory, setSearchTerm, setSelectedCategory]);
+  
+  // Load user's favorites if logged in
+  useEffect(() => {
+    const loadFavorites = async () => {
+      if (currentUser) {
+        try {
+          const userFavorites = await productService.getUserFavorites();
+          setFavorites(userFavorites.map(fav => fav.productId));
+        } catch (err) {
+          console.error('Error loading favorites:', err);
+        }
+      }
+    };
+    
+    loadFavorites();
+  }, [currentUser]);
+  
+  // Fetch search results when search term, category, or filters change
+  useEffect(() => {
+    if (!queryTerm && !queryCategory) {
+      setResults([]);
+      setNoResults(false);
+      setLoading(false);
+      return;
+    }
+    
+    setLoading(true);
+    
+    const fetchResults = async () => {
+      try {
+        // Prepare search parameters
+        const searchOptions = {
+          query: queryTerm,
+          category: queryCategory !== 'all' ? queryCategory : undefined,
+          page: currentPage,
+          limit: pagination.limit,
+          sort: filters.sortBy === 'relevance' ? undefined : filters.sortBy
+        };
+        
+        // Add filters if they're not set to 'all'
+        if (filters.priceRange !== 'all') {
+          const [min, max] = filters.priceRange.split('-');
+          searchOptions.minPrice = min !== 'min' ? parseFloat(min) : undefined;
+          searchOptions.maxPrice = max !== 'max' ? parseFloat(max) : undefined;
+        }
+        
+        if (filters.region !== 'all') {
+          searchOptions.region = filters.region;
+        }
+        
+        if (filters.rating !== 'all') {
+          searchOptions.minRating = parseFloat(filters.rating);
+        }
+        
+        // Call the product service
+        const response = await productService.searchProducts(searchOptions);
+        
+        setResults(response.products);
+        setPagination({
+          page: response.page,
+          limit: response.limit,
+          total: response.total,
+          totalPages: response.totalPages
+        });
+        
+        setNoResults(response.products.length === 0);
+      } catch (err) {
+        console.error('Error searching products:', err);
+        setError(err.message || 'Failed to search products');
+        setNoResults(true);
+        setResults([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchResults();
+  }, [queryTerm, queryCategory, filters, currentPage, pagination.limit]);
+
+  // Handle filter changes
+  const handleFilterChange = (filterType, value) => {
+    const newFilters = { ...filters, [filterType]: value };
+    setFilters(newFilters);
+    
+    // Update URL with new filter parameters
+    const newParams = new URLSearchParams(searchParams);
+    newParams.set(`filter_${filterType}`, value);
+    newParams.delete('page'); // Reset to page 1 when filtering
+    
+    navigate({
+      pathname: location.pathname,
+      search: newParams.toString()
+    });
+  };
+  
+  // Handle page change
+  const handlePageChange = (newPage) => {
+    const newParams = new URLSearchParams(searchParams);
+    newParams.set('page', newPage.toString());
+    
+    navigate({
+      pathname: location.pathname,
+      search: newParams.toString()
+    });
+  };
+  
+  // Toggle favorite status
+  const toggleFavorite = async (productId) => {
+    if (!currentUser) {
+      // Redirect to login if not logged in
+      navigate('/login', { state: { from: location } });
+      return;
+    }
+    
+    try {
+      if (favorites.includes(productId)) {
+        await productService.removeFromFavorites(productId);
+        setFavorites(favorites.filter(id => id !== productId));
+      } else {
+        await productService.addToFavorites(productId);
+        setFavorites([...favorites, productId]);
+      }
+    } catch (err) {
+      console.error('Error updating favorites:', err);
+      // Show error toast or notification
+    }
+  };
+  
+  // Add to cart function
+  const handleAddToCart = async (product) => {
+    try {
+      await addItem({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        quantity: 1,
+        image: product.image
+      });
+      
+      // Show toast notification or success message
+    } catch (err) {
+      console.error('Error adding to cart:', err);
+      // Show error toast or notification
+    }
+  };
+  
+  return (
+    <div className="search-results">
+      <div className="search-header">
+        <h1>
+          {queryTerm ? 
+            `Search Results for "${queryTerm}"` : 
+            queryCategory ? 
+              `${queryCategory}` : 
+              'All Products'
+          }
+        </h1>
+        
+        {pagination.total > 0 && (
+          <p className="result-count">
+            Showing {results.length} of {pagination.total} products
+          </p>
+        )}
+        
+        <div className="search-actions">
+          <button 
+            className={`filter-toggle ${filterOpen ? 'active' : ''}`}
+            onClick={() => setFilterOpen(!filterOpen)}
+          >
+            <FaFilter /> Filters
+          </button>
+        </div>
+      </div>
+      
+      <div className="search-container">
+        <div className={`filter-panel ${filterOpen ? 'open' : ''}`}>
+          {/* Filter panel content */}
+          <div className="filter-section">
+            <h3>Category</h3>
+            <select 
+              value={filters.category} 
+              onChange={(e) => handleFilterChange('category', e.target.value)}
+            >
+              <option value="all">All Categories</option>
+              {/* Populate dynamically from API */}
+              <option value="Textiles">Textiles</option>
+              <option value="Beauty">Beauty & Personal Care</option>
+              <option value="Food">Food & Beverages</option>
+              <option value="Jewelry">Jewelry</option>
+              <option value="Art">Art & Crafts</option>
+            </select>
+          </div>
+          
+          <div className="filter-section">
+            <h3>Region</h3>
+            <select 
+              value={filters.region} 
+              onChange={(e) => handleFilterChange('region', e.target.value)}
+            >
+              <option value="all">All Regions</option>
+              <option value="Ashanti">Ashanti</option>
+              <option value="Greater Accra">Greater Accra</option>
+              <option value="Eastern">Eastern</option>
+              <option value="Northern">Northern</option>
+              <option value="Western">Western</option>
+            </select>
+          </div>
+          
+          <div className="filter-section">
+            <h3>Price Range</h3>
+            <select 
+              value={filters.priceRange} 
+              onChange={(e) => handleFilterChange('priceRange', e.target.value)}
+            >
+              <option value="all">Any Price</option>
+              <option value="0-50">Under GH₵50</option>
+              <option value="50-100">GH₵50 to GH₵100</option>
+              <option value="100-200">GH₵100 to GH₵200</option>
+              <option value="200-max">Over GH₵200</option>
+            </select>
+          </div>
+          
+          <div className="filter-section">
+            <h3>Rating</h3>
+            <select 
+              value={filters.rating} 
+              onChange={(e) => handleFilterChange('rating', e.target.value)}
+            >
+              <option value="all">Any Rating</option>
+              <option value="4">4+ Stars</option>
+              <option value="3">3+ Stars</option>
+              <option value="2">2+ Stars</option>
+            </select>
+          </div>
+          
+          <div className="filter-section">
+            <h3>Sort By</h3>
+            <select 
+              value={filters.sortBy} 
+              onChange={(e) => handleFilterChange('sortBy', e.target.value)}
+            >
+              <option value="relevance">Relevance</option>
+              <option value="price_low">Price (Low to High)</option>
+              <option value="price_high">Price (High to Low)</option>
+              <option value="newest">Newest Arrivals</option>
+              <option value="rating">Best Rated</option>
+            </select>
+          </div>
+        </div>
+        
+        <div className="results-container">
+          {loading ? (
+            <div className="loading-spinner">Loading products...</div>
+          ) : error ? (
+            <div className="error-message">
+              <p>{error}</p>
+              <button onClick={() => window.location.reload()}>Try Again</button>
+            </div>
+          ) : noResults ? (
+            <div className="no-results">
+              <h3>No products found</h3>
+              <p>Try adjusting your search or filters to find what you're looking for.</p>
+              <button onClick={() => navigate('/')}>Browse All Products</button>
+            </div>
+          ) : (
+            <>
+              <div className="product-grid">
+                {results.map((product) => (
+                  <div className="product-card" key={product.id}>
+                    <div className="product-actions">
+                      <button 
+                        className={`favorite-btn ${favorites.includes(product.id) ? 'active' : ''}`}
+                        onClick={() => toggleFavorite(product.id)}
+                      >
+                        <FaHeart />
+                      </button>
+                    </div>
+                    
+                    <Link to={`/product/${product.id}`} className="product-link">
+                      <div className="product-image-container">
+                        <img 
+                          src={product.image || '/images/placeholder.jpg'} 
+                          alt={product.name} 
+                          className="product-image"
+                          loading="lazy"
+                        />
+                      </div>
+                      
+                      <div className="product-info">
+                        <h3 className="product-name">{product.name}</h3>
+                        
+                        <div className="product-meta">
+                          <span className="product-category">{product.category}</span>
+                          <span className="product-region">{product.region}</span>
+                        </div>
+                        
+                        <div className="product-rating">
+                          <span className="stars">
+                            {[...Array(5)].map((_, i) => (
+                              <FaStar 
+                                key={i}
+                                className={i < Math.floor(product.rating) ? 'filled' : ''}
+                              />
+                            ))}
+                          </span>
+                          <span className="rating-value">{product.rating.toFixed(1)}</span>
+                        </div>
+                        
+                        <div className="product-price">GH₵{product.price.toFixed(2)}</div>
+                      </div>
+                    </Link>
+                    
+                    <button 
+                      className="add-to-cart"
+                      onClick={() => handleAddToCart(product)}
+                    >
+                      <FaShoppingCart /> Add to Cart
+                    </button>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Pagination Controls */}
+              {pagination.totalPages > 1 && (
+                <div className="pagination">
+                  <button 
+                    className="pagination-btn prev"
+                    disabled={currentPage === 1}
+                    onClick={() => handlePageChange(currentPage - 1)}
+                  >
+                    Previous
+                  </button>
+                  
+                  {[...Array(pagination.totalPages)].map((_, i) => {
+                    const pageNum = i + 1;
+                    // Display limited page numbers to avoid clutter
+                    if (
+                      pageNum === 1 ||
+                      pageNum === pagination.totalPages ||
+                      (pageNum >= currentPage - 1 && pageNum <= currentPage + 1)
+                    ) {
+                      return (
+                        <button
+                          key={pageNum}
+                          className={`pagination-btn page ${pageNum === currentPage ? 'active' : ''}`}
+                          onClick={() => handlePageChange(pageNum)}
+                        >
+                          {pageNum}
+                        </button>
+                      );
+                    } else if (
+                      pageNum === currentPage - 2 ||
+                      pageNum === currentPage + 2
+                    ) {
+                      return <span key={pageNum} className="pagination-ellipsis">...</span>;
+                    }
+                    return null;
+                  })}
+                  
+                  <button 
+                    className="pagination-btn next"
+                    disabled={currentPage === pagination.totalPages}
+                    onClick={() => handlePageChange(currentPage + 1)}
+                  >
+                    Next
+                  </button>
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SearchResults;

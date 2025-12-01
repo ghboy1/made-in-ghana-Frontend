@@ -1,0 +1,173 @@
+/* Scratch Playground Styles */
+
+.scratch-playground {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.scratch-playground .playground-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.scratch-playground .playground-header .icon {
+  color: #F9A21C; /* Scratch orange color */
+  font-size: 2rem;
+}
+
+.scratch-playground .playground-header h2 {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+/* Scratch iframe container */
+.scratch-iframe-container {
+  width: 100%;
+  height: 480px;
+  border: 1px solid #eee;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.scratch-iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Card styling */
+.scratch-embed-card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.scratch-embed-card .card-header {
+  background-color: #F9A21C; /* Scratch orange */
+  color: white;
+  font-weight: 600;
+}
+
+.scratch-tips-card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.scratch-tips-card .card-header {
+  background-color: #4D97FF; /* Scratch blue */
+  color: white;
+  font-weight: 600;
+}
+
+.scratch-examples-card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.scratch-examples-card .card-header {
+  background-color: #9966FF; /* Scratch purple */
+  color: white;
+  font-weight: 600;
+}
+
+/* Tips list styling */
+.tips-list {
+  padding-left: 1.25rem;
+}
+
+.tips-list li {
+  margin-bottom: 0.5rem;
+}
+
+.scratch-steps {
+  padding-left: 1.5rem;
+  counter-reset: scratch-step;
+}
+
+.scratch-steps li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  counter-increment: scratch-step;
+}
+
+.scratch-steps li::before {
+  content: counter(scratch-step);
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #F9A21C;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Example links */
+.scratch-example-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.example-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-left: 3px solid #F9A21C;
+}
+
+.example-link:hover {
+  background-color: #e9ecef;
+  transform: translateX(3px);
+  text-decoration: none;
+}
+
+/* Ghana-themed buttons */
+.btn-warning {
+  background-color: #F9A21C;
+  border-color: #F9A21C;
+}
+
+.btn-warning:hover, .btn-warning:focus {
+  background-color: #e08c17;
+  border-color: #e08c17;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .scratch-tips-card, .scratch-examples-card {
+    margin-top: 1.5rem;
+  }
+  
+  .scratch-iframe-container {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scratch-playground {
+    padding: 1rem;
+  }
+  
+  .scratch-iframe-container {
+    height: 350px;
+  }
+}

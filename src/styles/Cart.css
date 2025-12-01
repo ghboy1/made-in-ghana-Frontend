@@ -1,0 +1,508 @@
+/* Modern Cart Page Styling */
+.cart-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.cart-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cart-header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Progress indicator */
+.cart-progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.progress-step {
+  padding: 0.5rem 1rem;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.progress-step.active {
+  background-color: #006B3F; /* Ghana green */
+  color: white;
+}
+
+.progress-connector {
+  height: 2px;
+  width: 60px;
+  background-color: #e0e0e0;
+  margin: 0 0.5rem;
+}
+
+/* Empty cart styling */
+.empty-cart {
+  text-align: center;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.empty-cart-icon {
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+.empty-cart h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.empty-cart p {
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+/* Cart container layout */
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.cart-items-container {
+  flex: 1 1 65%;
+  min-width: 300px;
+}
+
+.cart-summary-container {
+  flex: 1 1 30%;
+  min-width: 300px;
+}
+
+/* Cart items styling */
+.cart-items-header {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1.5fr 1fr 0.5fr;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1.5fr 1fr 0.5fr;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+}
+
+.item-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.item-meta {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.item-meta span {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.item-price {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Quantity controls */
+.quantity-control {
+  display: flex;
+  align-items: center;
+  max-width: 120px;
+}
+
+.qty-btn {
+  width: 30px;
+  height: 30px;
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.qty-btn:hover:not(:disabled) {
+  background: #eee;
+}
+
+.qty-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantity-control input {
+  width: 40px;
+  height: 30px;
+  padding: 0;
+  margin: 0 0.5rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.item-subtotal {
+  font-weight: 600;
+  color: #333;
+}
+
+.item-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.remove-item-btn {
+  background: transparent;
+  border: none;
+  color: #ce1126; /* Ghana red */
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.2s;
+  border-radius: 50%;
+}
+
+.remove-item-btn:hover {
+  background-color: rgba(206, 17, 38, 0.1);
+}
+
+/* Cart summary styling */
+.cart-summary {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.cart-summary h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.75rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.summary-row.total {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: #333;
+}
+
+.free-shipping {
+  color: #006B3F; /* Ghana green */
+  font-weight: 600;
+}
+
+.summary-divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 1rem 0;
+}
+
+/* Promo code section */
+.promo-section {
+  margin: 1.5rem 0;
+}
+
+.promo-section form {
+  display: flex;
+}
+
+.promo-input {
+  flex: 1;
+  position: relative;
+}
+
+.promo-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.promo-input input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+}
+
+.apply-promo-btn {
+  background-color: #fcd116; /* Ghana yellow */
+  color: #333;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  padding: 0 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.apply-promo-btn:hover {
+  background-color: #f0c000;
+}
+
+.apply-promo-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Checkout button */
+.checkout-btn {
+  width: 100%;
+  background-color: #006B3F; /* Ghana green */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-btn svg {
+  margin-right: 0.5rem;
+}
+
+.checkout-btn:hover {
+  background-color: #005030;
+}
+
+/* Checkout info */
+.checkout-info {
+  margin-top: 1.5rem;
+}
+
+.checkout-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.checkout-info-item svg {
+  margin-right: 0.5rem;
+  color: #006B3F; /* Ghana green */
+}
+
+/* Continue shopping & clear cart buttons */
+.cart-actions-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.continue-shopping-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.continue-shopping-btn svg {
+  margin-right: 0.5rem;
+}
+
+.continue-shopping-btn:hover {
+  background-color: #f9f9f9;
+  border-color: #ccc;
+}
+
+.clear-cart-btn {
+  background-color: transparent;
+  color: #ce1126; /* Ghana red */
+  border: 1px solid #ce1126;
+  border-radius: 4px;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clear-cart-btn:hover {
+  background-color: rgba(206, 17, 38, 0.05);
+}
+
+/* You might also like section */
+.you-might-like {
+  margin-top: 3rem;
+}
+
+.you-might-like h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.recommendations-placeholder {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  color: #777;
+}
+
+/* Modal for clearing cart */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-content h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.modal-content p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.modal-cancel {
+  background-color: #f1f1f1;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal-cancel:hover {
+  background-color: #e0e0e0;
+}
+
+.modal-confirm {
+  background-color: #ce1126; /* Ghana red */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal-confirm:hover {
+  background-color: #b00e20;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cart-items-header {
+    display: none; /* Hide headers on small screens */
+  }
+  
+  .cart-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+  
+  .item-price, .item-subtotal {
+    text-align: left;
+  }
+  
+  .item-actions {
+    justify-content: flex-start;
+  }
+  
+  .cart-actions-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .continue-shopping-btn, .clear-cart-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,110 @@
+/* Ghana Flag Colors */
+:root {
+  --ghana-red: #ce1126;
+  --ghana-gold: #fcd116;
+  --ghana-green: #006b3f;
+  --ghana-black: #000000;
+  --ghana-red-light: rgba(206, 17, 38, 0.1);
+  --ghana-gold-light: rgba(252, 209, 22, 0.1);
+  --ghana-green-light: rgba(0, 107, 63, 0.1);
+}
+
+/* Ghana-themed cards */
+.card-ghana {
+  border: none;
+  border-top: 4px solid var(--ghana-gold);
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  overflow: hidden;
+}
+
+.card-header-ghana {
+  background: linear-gradient(90deg, var(--ghana-red) 0%, var(--ghana-green) 100%);
+  color: white;
+  font-weight: 500;
+  padding: 1rem;
+  border-bottom: none;
+}
+
+/* Ghana-themed buttons */
+.btn-success {
+  background-color: var(--ghana-red) !important;
+  border-color: var(--ghana-red) !important;
+}
+
+.btn-success:hover, .btn-success:focus {
+  background-color: #b8001a !important;
+  border-color: #b8001a !important;
+}
+
+.btn-primary {
+  background-color: var(--ghana-green) !important;
+  border-color: var(--ghana-green) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #005230 !important;
+  border-color: #005230 !important;
+}
+
+.btn-outline-primary {
+  color: var(--ghana-green) !important;
+  border-color: var(--ghana-green) !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: var(--ghana-green) !important;
+  color: white !important;
+}
+
+.btn-secondary {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+}
+
+/* Ghana-themed progress bar */
+.progress-bar {
+  background-color: var(--ghana-green) !important;
+}
+
+/* Ghana-themed text colors */
+.ghana-red-text {
+  color: var(--ghana-red) !important;
+}
+
+.ghana-gold-text {
+  color: var(--ghana-gold) !important;
+}
+
+.ghana-green-text {
+  color: var(--ghana-green) !important;
+}
+
+/* Ghana-themed backgrounds */
+.bg-ghana-red {
+  background-color: var(--ghana-red) !important;
+  color: white;
+}
+
+.bg-ghana-gold {
+  background-color: var(--ghana-gold) !important;
+  color: var(--ghana-black);
+}
+
+.bg-ghana-green {
+  background-color: var(--ghana-green) !important;
+  color: white;
+}
+
+/* Ghana-themed alerts */
+.alert-success {
+  background-color: var(--ghana-green-light) !important;
+  color: var(--ghana-green) !important;
+  border-color: var(--ghana-green) !important;
+}
+
+.alert-warning {
+  background-color: var(--ghana-gold-light) !important;
+  color: #8a6d00 !important;
+  border-color: var(--ghana-gold) !important;
+}
